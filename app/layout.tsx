@@ -2,25 +2,14 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const ibmPlexThai = localFont({
+const ibmPlexSansThai = localFont({
   src: [
-    { path: "../public/fonts/ibm-plex-sans-thai-thai-400-normal.woff2", weight: "400", style: "normal" },
-    { path: "../public/fonts/ibm-plex-sans-thai-thai-500-normal.woff2", weight: "500", style: "normal" },
-    { path: "../public/fonts/ibm-plex-sans-thai-thai-600-normal.woff2", weight: "600", style: "normal" },
-    { path: "../public/fonts/ibm-plex-sans-thai-thai-700-normal.woff2", weight: "700", style: "normal" },
+    { path: "../node_modules/@ibm/plex-sans-thai/fonts/complete/woff2/IBMPlexSansThai-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../node_modules/@ibm/plex-sans-thai/fonts/complete/woff2/IBMPlexSansThai-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../node_modules/@ibm/plex-sans-thai/fonts/complete/woff2/IBMPlexSansThai-SemiBold.woff2", weight: "600", style: "normal" },
+    { path: "../node_modules/@ibm/plex-sans-thai/fonts/complete/woff2/IBMPlexSansThai-Bold.woff2", weight: "700", style: "normal" },
   ],
-  variable: "--font-ibm-plex-thai",
-  display: "swap",
-});
-
-const ibmPlexLatin = localFont({
-  src: [
-    { path: "../public/fonts/ibm-plex-sans-thai-latin-400-normal.woff2", weight: "400", style: "normal" },
-    { path: "../public/fonts/ibm-plex-sans-thai-latin-500-normal.woff2", weight: "500", style: "normal" },
-    { path: "../public/fonts/ibm-plex-sans-thai-latin-600-normal.woff2", weight: "600", style: "normal" },
-    { path: "../public/fonts/ibm-plex-sans-thai-latin-700-normal.woff2", weight: "700", style: "normal" },
-  ],
-  variable: "--font-ibm-plex-latin",
+  variable: "--font-ibm-plex-sans-thai",
   display: "swap",
 });
 
@@ -53,7 +42,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="th">
-      <body className={`${ibmPlexThai.variable} ${ibmPlexLatin.variable}`}>{children}</body>
+      <body className={ibmPlexSansThai.variable}>{children}</body>
     </html>
   );
 }
