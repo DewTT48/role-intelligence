@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import "@ibm/plex-sans-thai/css/ibm-plex-sans-thai-all.css";
 import "./globals.css";
-
-const ibmPlexSansThai = localFont({
-  src: [
-    { path: "../node_modules/@ibm/plex-sans-thai/fonts/complete/woff2/IBMPlexSansThai-Regular.woff2", weight: "400", style: "normal" },
-    { path: "../node_modules/@ibm/plex-sans-thai/fonts/complete/woff2/IBMPlexSansThai-Medium.woff2", weight: "500", style: "normal" },
-    { path: "../node_modules/@ibm/plex-sans-thai/fonts/complete/woff2/IBMPlexSansThai-SemiBold.woff2", weight: "600", style: "normal" },
-    { path: "../node_modules/@ibm/plex-sans-thai/fonts/complete/woff2/IBMPlexSansThai-Bold.woff2", weight: "700", style: "normal" },
-  ],
-  variable: "--font-ibm-plex-sans-thai",
-  display: "swap",
-});
 
 const siteUrl = new URL("https://dewtt48.github.io/smart-jd/");
 const title = "Smart JD — Job Description ที่ดี คือจุดเริ่มต้นของการบริหารคนที่ดี";
@@ -42,7 +31,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="th">
-      <body className={ibmPlexSansThai.variable}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
