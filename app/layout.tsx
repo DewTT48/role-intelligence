@@ -7,8 +7,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = headerList.get("host") ?? "localhost:3000";
   const protocol = headerList.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
   const base = new URL(`${protocol}://${host}`);
-  const title = "Smart JD — JD ที่มีคุณค่ามากกว่าเอกสารหนึ่งฉบับ";
-  const description = "เปลี่ยนข้อมูลตำแหน่งให้เป็นโครงสร้างบทบาทงานที่ชัดเจน เป็นมาตรฐาน และนำไปใช้ต่อในงาน HR ได้ดียิ่งขึ้น";
+  const title = "Smart JD — Job Description ที่ดี คือจุดเริ่มต้นของการบริหารคนที่ดี";
+  const description = "เปลี่ยนข้อมูลตำแหน่งให้เป็น Job Description 19 หมวดที่มีโครงสร้าง เชื่อมบริบทธุรกิจและ Competency พร้อมนำไปใช้ต่อในงาน HR";
   const socialImage = new URL("/og.png", base).toString();
 
   return {

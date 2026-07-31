@@ -1,6 +1,6 @@
 # Smart JD
 
-Landing page สำหรับ Smart JD — ระบบที่ช่วยเปลี่ยนข้อมูลตำแหน่งให้เป็น Job Description ที่มีโครงสร้าง เป็นมาตรฐาน และนำไปใช้ต่อในงาน HR ได้ดียิ่งขึ้น
+Landing page สำหรับ Smart JD — ระบบที่ช่วยเปลี่ยนข้อมูลตำแหน่งให้เป็น Job Description 19 หมวดที่มีโครงสร้าง เป็นมาตรฐาน และนำไปใช้ต่อในงาน HR ได้ดียิ่งขึ้น
 
 โปรเจกต์นี้เป็นเว็บไซต์ใหม่ที่แยกจาก `DewTT48/smart-jd-builder` โดยสมบูรณ์ จึงสามารถพัฒนาและเผยแพร่ได้โดยไม่กระทบ Landing Page เดิม
 
@@ -9,6 +9,8 @@ Landing page สำหรับ Smart JD — ระบบที่ช่วย�
 - Landing page ภาษาไทยแบบ Responsive
 - CTA `ขอเดโม` และ `เข้าสู่ระบบ` โดยไม่มีการเสนอสร้าง JD ฟรี
 - ภาพหน้าจอระบบจริง: JD Workspace, Business Context และ Batch Import
+- ตัวอย่าง Job Description ฉบับจริง 8 หน้า พร้อมตัวสำรวจเนื้อหา 19 หมวด
+- IBM Plex Sans Thai แบบ Self-hosted ครบ 4 น้ำหนัก
 - ฟอร์มขอเดโมที่เชื่อมกับ Google Apps Script Lead API เดิม
 - หน้า `/privacy` สำหรับนโยบายความเป็นส่วนตัว
 - Social Preview Card สำหรับการแชร์ลิงก์

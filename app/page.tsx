@@ -69,6 +69,15 @@ const steps = [
   ["04", "Review & use", "HR ตรวจ แก้ไข ยืนยัน และสร้างเอกสารที่พร้อมนำไปใช้งานต่อ"],
 ];
 
+const jdSamples = [
+  { id: "overview", label: "ภาพรวมตำแหน่ง", detail: "วัตถุประสงค์ · ความเชื่อมโยงกับธุรกิจ · ความรับผิดชอบหลัก", page: 1 },
+  { id: "responsibilities", label: "หน้าที่และมาตรฐานงาน", detail: "หน้าที่หลัก · ความถี่ · ผู้เกี่ยวข้อง · Expected Standard", page: 2 },
+  { id: "outcomes", label: "ผลลัพธ์และตัวชี้วัด", detail: "Expected Outputs · Indicators · Target · Review Frequency", page: 3 },
+  { id: "competencies", label: "คุณสมบัติและ Competency", detail: "คุณสมบัติ · ทักษะ · Competency · เหตุผลที่จำเป็น", page: 4 },
+  { id: "evaluation", label: "ข้อมูลประกอบ Job Evaluation", detail: "ความรู้ · ความซับซ้อน · ผลกระทบ · อำนาจตัดสินใจ", page: 6 },
+  { id: "hr-use", label: "แนวทางนำไปใช้ใน HR", detail: "Recruitment · Performance · Development · Job Evaluation", page: 7 },
+];
+
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
@@ -76,6 +85,7 @@ function Arrow() {
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(productTabs[0].id);
+  const [activeJdSample, setActiveJdSample] = useState(jdSamples[0].id);
   const [contactOpen, setContactOpen] = useState(false);
   const [formStatus, setFormStatus] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -85,6 +95,8 @@ export default function Home() {
 
   const activeProduct =
     productTabs.find((tab) => tab.id === activeTab) ?? productTabs[0];
+  const activeJd =
+    jdSamples.find((sample) => sample.id === activeJdSample) ?? jdSamples[0];
 
   useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
@@ -176,6 +188,7 @@ export default function Home() {
             <span>Smart JD</span>
           </a>
           <nav className="desktop-nav" aria-label="เมนูหลัก">
+            <a href="#jd-preview">ตัวอย่าง JD</a>
             <a href="#value">คุณค่าของ JD</a>
             <a href="#product">ดูระบบจริง</a>
             <a href="#how">วิธีการทำงาน</a>
@@ -197,6 +210,7 @@ export default function Home() {
         </div>
         {menuOpen && (
           <nav className="mobile-nav" aria-label="เมนูมือถือ">
+            <a href="#jd-preview" onClick={() => setMenuOpen(false)}>ตัวอย่าง JD</a>
             <a href="#value" onClick={() => setMenuOpen(false)}>คุณค่าของ JD</a>
             <a href="#product" onClick={() => setMenuOpen(false)}>ดูระบบจริง</a>
             <a href="#how" onClick={() => setMenuOpen(false)}>วิธีการทำงาน</a>
@@ -213,11 +227,11 @@ export default function Home() {
           <div className="hero-orb hero-orb-two" />
           <div className="section-shell hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow"><span /> JOB DATA THAT WORKS HARDER</p>
-              <h1>JD ที่ดี<br />ไม่ได้จบแค่<br /><em>การรับสมัคร</em></h1>
+              <p className="eyebrow"><span /> A BETTER JOB DESCRIPTION</p>
+              <h1>Job Description ที่ดี<br />คือจุดเริ่มต้นของ<br /><em>การบริหารคนที่ดี</em></h1>
               <p className="hero-lead">
-                เปลี่ยนข้อมูลตำแหน่งให้เป็นโครงสร้างบทบาทงานที่ชัดเจน
-                เป็นมาตรฐาน และมีคุณค่าต่อการตัดสินใจด้านคนตลอด Employee Lifecycle
+                เปลี่ยนข้อมูลตำแหน่งให้เป็น Job Description 19 หมวดที่มีโครงสร้าง
+                เชื่อมบริบทธุรกิจและ Competency พร้อมนำไปใช้ต่อในงาน HR ได้ดียิ่งขึ้น
               </p>
               <div className="hero-actions">
                 <button className="button button-primary button-large" type="button" onClick={openContact}>
@@ -230,32 +244,92 @@ export default function Home() {
               <p className="human-note"><span>✓</span> AI ช่วยจัดโครงสร้าง — มนุษย์ตรวจ แก้ไข และตัดสินใจก่อนใช้จริง</p>
             </div>
 
-            <div className="role-map" aria-label="แผนภาพแสดง JD เป็นข้อมูลตั้งต้นสำหรับงาน HR">
-              <div className="map-topline"><span>ROLE FOUNDATION</span><strong>Marketing Manager</strong></div>
-              <div className="map-core">
-                <div className="map-score"><span>JD</span><small>Structured role data</small></div>
-                <div className="map-fields">
-                  <span>Job Purpose</span><span>Expected Outcomes</span><span>Responsibilities</span><span>Competencies</span>
-                </div>
+            <div className="hero-document" aria-label="ตัวอย่าง Job Description ที่สร้างจากระบบ Smart JD">
+              <div className="hero-document-bar">
+                <span>JOB DESCRIPTION PREVIEW</span>
+                <small>ตัวอย่างจากระบบจริง</small>
               </div>
-              <div className="map-divider"><span>นำข้อมูลไปใช้ต่อ</span></div>
-              <div className="map-outcomes">
-                <div><b>01</b><span>Recruitment</span></div>
-                <div><b>02</b><span>Interview</span></div>
-                <div><b>03</b><span>Performance</span></div>
-                <div><b>04</b><span>Development</span></div>
+              <div className="hero-page">
+                <Image
+                  src="/demo-jd/page-01.webp"
+                  alt="ตัวอย่าง Job Description ตำแหน่ง Account Executive หน้าแรก"
+                  width={1200}
+                  height={1695}
+                  priority
+                  sizes="(max-width: 1050px) 80vw, 48vw"
+                />
               </div>
-              <div className="map-stamp"><span>✓</span> Human reviewed</div>
+              <div className="hero-document-meta">
+                <div><strong>19</strong><span>หัวข้อที่มีโครงสร้าง</span></div>
+                <div><strong>8</strong><span>หน้าตัวอย่างฉบับเต็ม</span></div>
+                <div><strong>✓</strong><span>ตรวจและแก้ไขก่อนใช้</span></div>
+              </div>
+              <div className="document-stamp"><span>JD</span> พร้อมสร้างเป็นเอกสาร</div>
             </div>
           </div>
         </section>
 
         <section className="proof-strip" aria-label="จุดเด่นของ Smart JD">
           <div className="section-shell proof-grid">
-            <div><strong>Structured</strong><span>ข้อมูลตำแหน่งเป็นระบบ</span></div>
+            <div><strong>19 structured sections</strong><span>Job Description ที่ครบและเป็นระบบ</span></div>
             <div><strong>Business-aligned</strong><span>เชื่อมบริบทองค์กร</span></div>
             <div><strong>Human-reviewed</strong><span>HR ควบคุมทุกขั้น</span></div>
             <div><strong>Reusable</strong><span>นำไปใช้ในงาน HR ต่อได้</span></div>
+          </div>
+        </section>
+
+        <section className="section jd-preview-section" id="jd-preview">
+          <div className="section-shell">
+            <div className="section-heading split-heading jd-preview-heading">
+              <div>
+                <p className="eyebrow"><span /> INSIDE YOUR SMART JD</p>
+                <h2>เห็นผลลัพธ์ก่อน<br />ตัดสินใจใช้ระบบ</h2>
+              </div>
+              <div>
+                <p>ตัวอย่าง Job Description ตำแหน่ง Account Executive ที่สร้างจากระบบจริง โดยใช้ข้อมูลจำลองและนำข้อมูลส่วนบุคคลออกแล้ว</p>
+                <span className="sample-note"><i>✓</i> ครบ 19 หมวด ตั้งแต่ Job Purpose ถึงแนวทางนำไปใช้ในงาน HR</span>
+              </div>
+            </div>
+
+            <div className="jd-explorer">
+              <div className="jd-explorer-nav" role="tablist" aria-label="เลือกดูส่วนต่าง ๆ ของ Job Description">
+                <div className="jd-explorer-title"><span>JOB DESCRIPTION</span><strong>Account Executive</strong><small>Sales / Business Development</small></div>
+                {jdSamples.map((sample, index) => (
+                  <button
+                    key={sample.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={activeJdSample === sample.id}
+                    className={activeJdSample === sample.id ? "active" : ""}
+                    onClick={() => setActiveJdSample(sample.id)}
+                  >
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div><strong>{sample.label}</strong><small>{sample.detail}</small></div>
+                    <i>→</i>
+                  </button>
+                ))}
+                <button className="jd-demo-link" type="button" onClick={openContact}>ขอดูเดโมกับตำแหน่งขององค์กรคุณ <Arrow /></button>
+              </div>
+
+              <div className="jd-document-viewer" role="tabpanel">
+                <div className="viewer-toolbar">
+                  <div><span /><span /><span /></div>
+                  <strong>{activeJd.label}</strong>
+                  <small>หน้า {activeJd.page} / 8</small>
+                </div>
+                <div className="viewer-page">
+                  <Image
+                    key={activeJd.page}
+                    src={`/demo-jd/page-${String(activeJd.page).padStart(2, "0")}.webp`}
+                    alt={`ตัวอย่าง Job Description ส่วน${activeJd.label} หน้า ${activeJd.page}`}
+                    width={1200}
+                    height={1695}
+                    sizes="(max-width: 900px) 100vw, 58vw"
+                  />
+                </div>
+                <div className="viewer-caption"><span>ตัวอย่างจาก Smart JD</span><small>ผู้ใช้ต้องตรวจสอบและยืนยันก่อนนำไปใช้จริง</small></div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -286,7 +360,7 @@ export default function Home() {
               <blockquote>“เราไม่ได้สร้าง JD เพื่อให้มีเอกสารครบ<br />แต่สร้างให้ทุกคนเข้าใจว่า งานนี้มีไว้เพื่ออะไร”</blockquote>
             </div>
             <div className="reframe-copy">
-              <p className="eyebrow light"><span /> FROM DOCUMENT TO ROLE DATA</p>
+              <p className="eyebrow light"><span /> FROM BASIC JD TO HR FOUNDATION</p>
               <h2>เปลี่ยนจากการเขียนเอกสาร<br />เป็นการออกแบบบทบาทงาน</h2>
               <p>
                 Smart JD พาคุณเริ่มจาก Business Need แล้วเชื่อมเป้าหมายของบทบาท ผลลัพธ์ หน้าที่ ทักษะ และ Competency เข้าไว้ในโครงสร้างเดียวกัน
@@ -300,7 +374,7 @@ export default function Home() {
             <div className="section-heading centered-heading">
               <p className="eyebrow"><span /> ONE JD · MORE HR VALUE</p>
               <h2>JD หนึ่งฉบับ เป็นข้อมูลตั้งต้น<br />ให้ HR ทำงานได้ดีกว่าเดิม</h2>
-              <p>ไม่ได้แทนระบบ HR อื่น แต่ช่วยให้ทุก Workflow เริ่มจากข้อมูลบทบาทที่ชัดและสอดคล้องกัน</p>
+              <p>ไม่ได้แทนระบบ HR อื่น แต่ช่วยให้ทุก Workflow เริ่มจากข้อมูลใน Job Description ที่ชัดและสอดคล้องกัน</p>
             </div>
             <div className="outcome-grid">
               {outcomes.map((outcome) => (
@@ -396,7 +470,7 @@ export default function Home() {
               <div className="compare-row compare-head"><span>วิธีการ</span><span>จุดเริ่มต้น</span><span>สิ่งที่ได้</span><span>คุณค่าในงาน HR</span></div>
               <div className="compare-row"><strong>Word / ไฟล์เก่า</strong><span>เอกสารเปล่าหรือไฟล์เดิม</span><span>ข้อความและรูปแบบเอกสาร</span><span className="muted-value">จำกัดอยู่ในไฟล์</span></div>
               <div className="compare-row"><strong>Generic AI</strong><span>Prompt</span><span>ร่างข้อความที่รวดเร็ว</span><span className="muted-value">ต้องจัดบริบทและมาตรฐานต่อเอง</span></div>
-              <div className="compare-row featured"><strong><i>JD</i> Smart JD</strong><span>Business Need + Role Data</span><span>JD ที่มีโครงสร้างและผ่านการตรวจ</span><span className="good-value">เป็นข้อมูลตั้งต้นสำหรับ People Decisions</span></div>
+              <div className="compare-row featured"><strong><i>JD</i> Smart JD</strong><span>Business Need + Role Information</span><span>Job Description ที่มีโครงสร้างและผ่านการตรวจ</span><span className="good-value">เป็นข้อมูลตั้งต้นสำหรับ People Decisions</span></div>
             </div>
           </div>
         </section>
@@ -437,7 +511,7 @@ export default function Home() {
               <h2>เริ่มจาก JD<br />ต่อยอดสู่ People System</h2>
             </div>
             <div className="vision-road">
-              <div className="vision-current"><small>พร้อมใช้งานในปัจจุบัน</small><strong>Smart JD</strong><span>Structured role data</span></div>
+              <div className="vision-current"><small>พร้อมใช้งานในปัจจุบัน</small><strong>Smart JD</strong><span>Structured Job Description</span></div>
               <div className="vision-arrow">→</div>
               <div className="vision-future"><small>แนวทางการต่อยอด</small><div><span>Interview</span><span>Competency</span><span>KPI</span><span>Career</span></div></div>
             </div>

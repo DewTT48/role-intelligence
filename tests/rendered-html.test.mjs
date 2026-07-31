@@ -28,14 +28,19 @@ test("server-renders the Smart JD landing page", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /Smart JD — JD ที่มีคุณค่ามากกว่าเอกสารหนึ่งฉบับ/);
-  assert.match(html, /JD ที่ดี/);
+  assert.match(html, /Smart JD — Job Description ที่ดี คือจุดเริ่มต้นของการบริหารคนที่ดี/);
+  assert.match(html, /Job Description ที่ดี/);
+  assert.match(html, /Job Description 19 หมวด/);
+  assert.match(html, /INSIDE YOUR SMART JD/);
+  assert.match(html, /Account Executive/);
+  assert.match(html, /demo-jd%2Fpage-01\.webp/);
   assert.match(html, /ขอเดโม Smart JD/);
   assert.match(html, /มีบัญชีแล้ว เข้าสู่ระบบ/);
   assert.match(html, /REAL PRODUCT · REAL WORKFLOW/);
   assert.match(html, /RESPONSIBLE AI/);
   assert.match(html, /\/og\.png/);
   assert.doesNotMatch(html, /สร้าง JD ฟรี|เริ่มสร้าง JD ฟรี|codex-preview/);
+  assert.doesNotMatch(html, /JOB DATA|Structured role data|Role Data/);
 });
 
 test("server-renders the privacy page", async () => {
