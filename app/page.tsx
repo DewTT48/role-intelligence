@@ -8,6 +8,8 @@ const APP_URL =
   "https://script.google.com/macros/s/AKfycbwLVLP47ZKYsMz6cpAYSGVPWdmQ6g9AmX0cDF1A0SV6tx9NR8Z1A_snPuAnw2tMHFRf/exec";
 const LEAD_ENDPOINT =
   "https://script.google.com/macros/s/AKfycbwukSqFDCuGT15ZvM9j0b4hUy1qE1rr2v__kt8NQgj09dubVIpJkrFU1Wd_RfUoSqMx/exec";
+const PUBLIC_BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const publicAsset = (path: string) => `${PUBLIC_BASE_PATH}${path}`;
 
 const productTabs = [
   {
@@ -91,7 +93,7 @@ export default function Home() {
   const [submitting, setSubmitting] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const requestIdRef = useRef("");
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const timerRef = useRef<number | null>(null);
 
   const activeProduct =
     productTabs.find((tab) => tab.id === activeTab) ?? productTabs[0];
@@ -251,7 +253,7 @@ export default function Home() {
               </div>
               <div className="hero-page">
                 <Image
-                  src="/demo-jd/page-01.webp"
+                  src={publicAsset("/demo-jd/page-01.webp")}
                   alt="ตัวอย่าง Job Description ตำแหน่ง Account Executive หน้าแรก"
                   width={1200}
                   height={1695}
@@ -320,7 +322,7 @@ export default function Home() {
                 <div className="viewer-page">
                   <Image
                     key={activeJd.page}
-                    src={`/demo-jd/page-${String(activeJd.page).padStart(2, "0")}.webp`}
+                    src={publicAsset(`/demo-jd/page-${String(activeJd.page).padStart(2, "0")}.webp`)}
                     alt={`ตัวอย่าง Job Description ส่วน${activeJd.label} หน้า ${activeJd.page}`}
                     width={1200}
                     height={1695}
@@ -429,7 +431,7 @@ export default function Home() {
                 <div className="browser-bar"><span /><span /><span /><small>Smart JD workspace</small></div>
                 <Image
                   key={activeProduct.image}
-                  src={activeProduct.image}
+                  src={publicAsset(activeProduct.image)}
                   alt={activeProduct.alt}
                   width={1440}
                   height={1100}

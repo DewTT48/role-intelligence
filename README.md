@@ -2,6 +2,8 @@
 
 Landing page สำหรับ Smart JD — ระบบที่ช่วยเปลี่ยนข้อมูลตำแหน่งให้เป็น Job Description 19 หมวดที่มีโครงสร้าง เป็นมาตรฐาน และนำไปใช้ต่อในงาน HR ได้ดียิ่งขึ้น
 
+เว็บไซต์: [https://dewtt48.github.io/smart-jd/](https://dewtt48.github.io/smart-jd/)
+
 โปรเจกต์นี้เป็นเว็บไซต์ใหม่ที่แยกจาก `DewTT48/smart-jd-builder` โดยสมบูรณ์ จึงสามารถพัฒนาและเผยแพร่ได้โดยไม่กระทบ Landing Page เดิม
 
 ## สิ่งที่มีในเว็บไซต์
@@ -30,6 +32,8 @@ npm run dev
 ```bash
 npm test
 ```
+
+GitHub Pages จะ build และ publish อัตโนมัติจาก branch `main` ผ่าน GitHub Actions
 
 ## โครงสร้างหลัก
 
