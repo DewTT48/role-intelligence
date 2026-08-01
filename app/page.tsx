@@ -75,18 +75,18 @@ const outcomes = [
 ];
 
 const hrUses = [
-  "Recruitment",
-  "Interview",
+  "สรรหา",
+  "สัมภาษณ์",
   "Onboarding",
-  "Performance & KPI",
+  "เป้าหมายและ KPI",
   "Competency",
   "Learning & IDP",
   "Career Path",
-  "Succession Planning",
-  "Job Evaluation",
-  "Compensation",
-  "Workforce Planning",
-  "Organization Design",
+  "Succession",
+  "ประเมินค่างาน",
+  "ค่าตอบแทน",
+  "วางกำลังคน",
+  "ออกแบบองค์กร",
 ];
 
 const steps = [
@@ -576,8 +576,8 @@ export default function Home() {
               <h2 className="title-lines"><span>เริ่มจาก JD ที่ชัด</span><span>แล้วเชื่อมงานบริหารคน</span><span>เข้าด้วยกัน</span></h2>
             </div>
             <div className="vision-road">
-              <div className="vision-current"><small>พร้อมใช้งานในปัจจุบัน</small><strong>ระบบสร้าง JD อัจฉริยะ</strong><span>เปลี่ยนข้อมูลตำแหน่งให้เป็น Job Description 19 หมวดที่มีโครงสร้าง</span></div>
-              <div className="vision-arrow">→</div>
+              <div className="vision-current"><small>ข้อมูลตั้งต้นที่พร้อมใช้งาน</small><strong>Job Description 19 หมวดที่มีโครงสร้าง</strong><span>อธิบายเป้าหมายของงาน หน้าที่ ผลลัพธ์ ขอบเขตความรับผิดชอบ และ Competency บนข้อมูลชุดเดียวกัน</span></div>
+              <div className="vision-arrow"><span>นำข้อมูลชุดเดียวกันไปใช้ต่อ</span><b>↓</b></div>
               <div className="vision-future"><small>แนวทางการนำข้อมูลไปใช้ต่อในงาน HR</small><div>{hrUses.map((item) => <span key={item}>{item}</span>)}</div></div>
             </div>
           </div>
@@ -595,7 +595,6 @@ export default function Home() {
             </div>
             <div className="final-actions">
               <button className="button button-light button-large" type="button" onClick={openContact}>ขอเดโม <Arrow /></button>
-              <a href={APP_URL} target="_blank" rel="noopener noreferrer">มีบัญชีแล้ว เข้าสู่ระบบ</a>
             </div>
           </div>
         </section>
@@ -629,14 +628,14 @@ export default function Home() {
               noValidate
             >
               <input className="honeypot" type="text" name="company_website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-              <label className="full-field">เรื่องที่ต้องการติดต่อ <span>*</span><select name="inquiry_type" required defaultValue="demo"><option value="demo">ขอเดโม ระบบสร้าง JD อัจฉริยะ</option><option value="trial">ขอทดลองใช้ / ขอเปิดบัญชี</option><option value="pricing">สอบถามราคาและเครดิต</option><option value="corporate">สอบถามสำหรับองค์กร</option><option value="support">แจ้งปัญหาการใช้งาน</option><option value="partnership">ความร่วมมือ / อื่น ๆ</option></select></label>
-              <label>ชื่อผู้ติดต่อ <span>*</span><input name="name" type="text" autoComplete="name" required /></label>
-              <label>บริษัท / องค์กร <span>*</span><input name="company" type="text" autoComplete="organization" required /></label>
-              <label>อีเมลสำหรับติดต่อกลับ <span>*</span><input name="email" type="email" autoComplete="email" required /></label>
+              <label className="full-field"><span className="field-label">เรื่องที่ต้องการติดต่อ <i>*</i></span><select name="inquiry_type" required defaultValue="demo"><option value="demo">ขอเดโม ระบบสร้าง JD อัจฉริยะ</option><option value="trial">ขอทดลองใช้ / ขอเปิดบัญชี</option><option value="pricing">สอบถามราคาและเครดิต</option><option value="corporate">สอบถามสำหรับองค์กร</option><option value="support">แจ้งปัญหาการใช้งาน</option><option value="partnership">ความร่วมมือ / อื่น ๆ</option></select></label>
+              <label><span className="field-label">ชื่อผู้ติดต่อ <i>*</i></span><input name="name" type="text" autoComplete="name" required /></label>
+              <label><span className="field-label">บริษัท / องค์กร <i>*</i></span><input name="company" type="text" autoComplete="organization" required /></label>
+              <label><span className="field-label">อีเมลสำหรับติดต่อกลับ <i>*</i></span><input name="email" type="email" autoComplete="email" required /></label>
               <label>เบอร์โทรศัพท์<input name="phone" type="tel" autoComplete="tel" /></label>
               <label>ตำแหน่ง / บทบาท<input name="role" type="text" autoComplete="organization-title" /></label>
               <label>จำนวนพนักงานโดยประมาณ<select name="organization_size" defaultValue=""><option value="">เลือกช่วง</option><option value="1-20">1–20 คน</option><option value="21-50">21–50 คน</option><option value="51-200">51–200 คน</option><option value="201-500">201–500 คน</option><option value="501+">มากกว่า 500 คน</option></select></label>
-              <label className="full-field">สิ่งที่ต้องการพัฒนาเกี่ยวกับ JD <span>*</span><textarea name="message" rows={4} required placeholder="เช่น ต้องการปรับ JD ให้เป็นมาตรฐาน หรือนำข้อมูลไปใช้ในการสรรหาและประเมินผลงาน" /></label>
+              <label className="full-field"><span className="field-label">สิ่งที่ต้องการพัฒนาเกี่ยวกับ JD <i>*</i></span><textarea name="message" rows={4} required placeholder="เช่น ต้องการปรับ JD ให้เป็นมาตรฐาน หรือนำข้อมูลไปใช้ในการสรรหาและประเมินผลงาน" /></label>
               <label className="consent full-field"><input type="checkbox" name="consent" value="accepted" required /><span>ฉันยินยอมให้เก็บและใช้ข้อมูลนี้เพื่อติดต่อกลับเกี่ยวกับบริการ <Link href="/privacy" target="_blank">อ่านนโยบายความเป็นส่วนตัว</Link></span></label>
               <input type="hidden" name="source" value="smart-jd-landing" />
               <input type="hidden" name="request_id" value="" />
