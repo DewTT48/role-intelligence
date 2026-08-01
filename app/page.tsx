@@ -62,6 +62,31 @@ const outcomes = [
     title: "พัฒนาคนได้ตรงจุด",
     body: "เห็นทักษะและ Competency ที่จำเป็นต่อบทบาท แล้วนำไปใช้วางแผนพัฒนาได้ตรงกับงานมากขึ้น",
   },
+  {
+    number: "05",
+    title: "เตรียมข้อมูลสำหรับประเมินค่างาน",
+    body: "มีข้อมูลเรื่องขอบเขต ความรับผิดชอบ การตัดสินใจ และผลกระทบของงานที่ชัดขึ้น เพื่อใช้เป็นหลักฐานตั้งต้นในการประเมินค่างานโดยผู้เชี่ยวชาญ",
+  },
+  {
+    number: "06",
+    title: "วางกำลังคนและเส้นทางอาชีพ",
+    body: "มองเห็นความเชื่อมโยงระหว่างบทบาท ระดับความรับผิดชอบ และทักษะที่ต้องพัฒนา เพื่อนำไปประกอบการวาง Workforce Plan, Career Path และ Succession",
+  },
+];
+
+const hrUses = [
+  "Recruitment",
+  "Interview",
+  "Onboarding",
+  "Performance & KPI",
+  "Competency",
+  "Learning & IDP",
+  "Career Path",
+  "Succession Planning",
+  "Job Evaluation",
+  "Compensation",
+  "Workforce Planning",
+  "Organization Design",
 ];
 
 const steps = [
@@ -407,8 +432,16 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <div className="lifecycle-line" aria-label="วงจรการนำ JD ไปใช้ต่อ">
-              <span className="active">Job Description</span><i>→</i><span>Recruitment</span><i>→</i><span>Interview</span><i>→</i><span>Performance</span><i>→</i><span>Learning</span><i>→</i><span>Career</span>
+            <div className="lifecycle-line" aria-label="แนวทางการนำข้อมูลจาก Job Description ไปใช้ต่อในงาน HR">
+              <div className="lifecycle-source">
+                <small>ข้อมูลตั้งต้น</small>
+                <strong>Job Description</strong>
+                <span>เป้าหมายงาน · หน้าที่ · ผลลัพธ์ · Competency</span>
+              </div>
+              <div className="lifecycle-connector" aria-hidden="true"><span>นำไปใช้ต่อ</span><b>→</b></div>
+              <div className="lifecycle-uses">
+                {hrUses.map((item) => <span key={item}>{item}</span>)}
+              </div>
             </div>
           </div>
         </section>
@@ -543,9 +576,9 @@ export default function Home() {
               <h2 className="title-lines"><span>เริ่มจาก JD ที่ชัด</span><span>แล้วเชื่อมงานบริหารคน</span><span>เข้าด้วยกัน</span></h2>
             </div>
             <div className="vision-road">
-              <div className="vision-current"><small>พร้อมใช้งานในปัจจุบัน</small><strong>ระบบสร้าง JD อัจฉริยะ</strong><span>Structured Job Description</span></div>
+              <div className="vision-current"><small>พร้อมใช้งานในปัจจุบัน</small><strong>ระบบสร้าง JD อัจฉริยะ</strong><span>เปลี่ยนข้อมูลตำแหน่งให้เป็น Job Description 19 หมวดที่มีโครงสร้าง</span></div>
               <div className="vision-arrow">→</div>
-              <div className="vision-future"><small>แนวทางการต่อยอด</small><div><span>Interview</span><span>Competency</span><span>KPI</span><span>Career</span></div></div>
+              <div className="vision-future"><small>แนวทางการนำข้อมูลไปใช้ต่อในงาน HR</small><div>{hrUses.map((item) => <span key={item}>{item}</span>)}</div></div>
             </div>
           </div>
         </section>
@@ -561,7 +594,7 @@ export default function Home() {
               </p>
             </div>
             <div className="final-actions">
-              <button className="button button-light button-large" type="button" onClick={openContact}>ขอเดโม ระบบสร้าง JD อัจฉริยะ <Arrow /></button>
+              <button className="button button-light button-large" type="button" onClick={openContact}>ขอเดโม <Arrow /></button>
               <a href={APP_URL} target="_blank" rel="noopener noreferrer">มีบัญชีแล้ว เข้าสู่ระบบ</a>
             </div>
           </div>
