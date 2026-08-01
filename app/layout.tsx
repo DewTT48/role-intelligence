@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import "@ibm/plex-sans-thai/css/ibm-plex-sans-thai-all.css";
 import "./globals.css";
 
 const siteUrl = new URL("https://dewtt48.github.io/smart-jd/");
 const title = "Smart JD — Job Description ที่ดี คือจุดเริ่มต้นของการบริหารคนที่ดี";
-const description = "เปลี่ยนข้อมูลตำแหน่งให้เป็น Job Description 19 หมวดที่มีโครงสร้าง เชื่อมบริบทธุรกิจและ Competency พร้อมนำไปใช้ต่อในงาน HR";
+const description = "เริ่มจากข้อมูลตำแหน่งเพียงไม่กี่เรื่อง แล้วเปลี่ยนให้เป็น Job Description 19 หมวดที่อธิบายเป้าหมาย งาน ผลลัพธ์ และ Competency ได้ครบ พร้อมนำไปใช้ต่อในงาน HR";
 const socialImage = "https://dewtt48.github.io/smart-jd/og.png";
 
 export const metadata: Metadata = {

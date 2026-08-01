@@ -31,9 +31,11 @@ test("server-renders the Smart JD landing page", async () => {
   assert.match(html, /Smart JD — Job Description ที่ดี คือจุดเริ่มต้นของการบริหารคนที่ดี/);
   assert.match(html, /Job Description ที่ดี/);
   assert.match(html, /Job Description 19 หมวด/);
-  assert.match(html, /INSIDE YOUR SMART JD/);
+  assert.match(html, /A LITTLE INPUT · A COMPLETE JD/);
   assert.match(html, /Account Executive/);
   assert.match(html, /demo-jd%2Fpage-01\.webp/);
+  assert.match(html, /demo-jd%2Fpage-08\.webp/);
+  assert.match(html, /เลื่อนลงเพื่ออ่าน JD ฉบับเต็ม/);
   assert.match(html, /ขอเดโม Smart JD/);
   assert.match(html, /มีบัญชีแล้ว เข้าสู่ระบบ/);
   assert.match(html, /REAL PRODUCT · REAL WORKFLOW/);
