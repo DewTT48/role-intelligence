@@ -8,6 +8,8 @@ const APP_URL =
   "https://script.google.com/macros/s/AKfycbwLVLP47ZKYsMz6cpAYSGVPWdmQ6g9AmX0cDF1A0SV6tx9NR8Z1A_snPuAnw2tMHFRf/exec";
 const LEAD_ENDPOINT =
   "https://script.google.com/macros/s/AKfycbwukSqFDCuGT15ZvM9j0b4hUy1qE1rr2v__kt8NQgj09dubVIpJkrFU1Wd_RfUoSqMx/exec";
+// The deployed lead service uses "trial" for demo and account-opening requests.
+const DEMO_INQUIRY_VALUE = "trial";
 const PUBLIC_BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const publicAsset = (path: string) => `${PUBLIC_BASE_PATH}${path}`;
 
@@ -233,6 +235,11 @@ export default function Home() {
     (form.elements.namedItem("request_id") as HTMLInputElement).value = requestId;
     (form.elements.namedItem("page_url") as HTMLInputElement).value = window.location.href;
     (form.elements.namedItem("user_agent") as HTMLInputElement).value = navigator.userAgent;
+    const inquirySelect = form.elements.namedItem("inquiry_type") as HTMLSelectElement;
+    const messageBody = form.elements.namedItem("message_body") as HTMLTextAreaElement;
+    const messageField = form.elements.namedItem("message") as HTMLInputElement;
+    const inquiryLabel = inquirySelect.selectedOptions[0]?.textContent?.trim() || "ขอเดโม";
+    messageField.value = `[เรื่องที่ติดต่อ: ${inquiryLabel}]\n${messageBody.value.trim()}`;
 
     setSubmitting(true);
     setFormStatus("กำลังส่งข้อมูล...");
@@ -682,16 +689,17 @@ export default function Home() {
               noValidate
             >
               <input className="honeypot" type="text" name="company_website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-              <label className="full-field"><span className="field-label">เรื่องที่ต้องการติดต่อ <i>*</i></span><select name="inquiry_type" required defaultValue="demo"><option value="demo">ขอเดโม ระบบสร้าง JD อัจฉริยะ</option><option value="trial">ขอทดลองใช้ / ขอเปิดบัญชี</option><option value="pricing">สอบถามราคาและเครดิต</option><option value="corporate">สอบถามสำหรับองค์กร</option><option value="support">แจ้งปัญหาการใช้งาน</option><option value="partnership">ความร่วมมือ / อื่น ๆ</option></select></label>
+              <label className="full-field"><span className="field-label">เรื่องที่ต้องการติดต่อ <i>*</i></span><select name="inquiry_type" required defaultValue={DEMO_INQUIRY_VALUE}><option value={DEMO_INQUIRY_VALUE}>ขอเดโม ระบบสร้าง JD อัจฉริยะ</option><option value="pricing">สอบถามราคาและเครดิต</option><option value="corporate">สอบถามสำหรับองค์กร</option><option value="support">แจ้งปัญหาการใช้งาน</option><option value="partnership">ความร่วมมือ / อื่น ๆ</option></select></label>
               <label><span className="field-label">ชื่อผู้ติดต่อ <i>*</i></span><input name="name" type="text" autoComplete="name" required /></label>
               <label><span className="field-label">บริษัท / องค์กร <i>*</i></span><input name="company" type="text" autoComplete="organization" required /></label>
               <label><span className="field-label">อีเมลสำหรับติดต่อกลับ <i>*</i></span><input name="email" type="email" autoComplete="email" required /></label>
               <label>เบอร์โทรศัพท์<input name="phone" type="tel" autoComplete="tel" /></label>
               <label>ตำแหน่ง / บทบาท<input name="role" type="text" autoComplete="organization-title" /></label>
               <label>จำนวนพนักงานโดยประมาณ<select name="organization_size" defaultValue=""><option value="">เลือกช่วง</option><option value="1-20">1–20 คน</option><option value="21-50">21–50 คน</option><option value="51-200">51–200 คน</option><option value="201-500">201–500 คน</option><option value="501+">มากกว่า 500 คน</option></select></label>
-              <label className="full-field"><span className="field-label">สิ่งที่ต้องการพัฒนาเกี่ยวกับ JD <i>*</i></span><textarea name="message" rows={4} required placeholder="เช่น ต้องการปรับ JD ให้เป็นมาตรฐาน หรือนำข้อมูลไปใช้ในการสรรหาและประเมินผลงาน" /></label>
+              <label className="full-field"><span className="field-label">สิ่งที่ต้องการพัฒนาเกี่ยวกับ JD <i>*</i></span><textarea name="message_body" rows={4} required placeholder="เช่น ต้องการปรับ JD ให้เป็นมาตรฐาน หรือนำข้อมูลไปใช้ในการสรรหาและประเมินผลงาน" /></label>
               <label className="consent full-field"><input type="checkbox" name="consent" value="accepted" required /><span>ฉันยินยอมให้เก็บและใช้ข้อมูลนี้เพื่อติดต่อกลับเกี่ยวกับบริการ <Link href="/privacy" target="_blank">อ่านนโยบายความเป็นส่วนตัว</Link></span></label>
-              <input type="hidden" name="source" value="smart-jd-landing" />
+              <input type="hidden" name="message" value="" />
+              <input type="hidden" name="source" value="smart-jd-demo-landing" />
               <input type="hidden" name="request_id" value="" />
               <input type="hidden" name="page_url" value="" />
               <input type="hidden" name="user_agent" value="" />

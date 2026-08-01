@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render(pathname = "/") {
@@ -43,6 +44,16 @@ test("server-renders the intelligent JD builder landing page", async () => {
   assert.match(html, /\/og\.png/);
   assert.doesNotMatch(html, /สร้าง JD ฟรี|เริ่มสร้าง JD ฟรี|codex-preview/);
   assert.doesNotMatch(html, /JOB DATA|Structured role data|Role Data/);
+});
+
+test("keeps the demo form compatible with the deployed lead service", async () => {
+  const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(source, /const DEMO_INQUIRY_VALUE = "trial"/);
+  assert.match(source, /name="inquiry_type"/);
+  assert.match(source, /name="message_body"/);
+  assert.match(source, /name="message"/);
+  assert.match(source, /smart-jd-demo-landing/);
+  assert.match(source, /\[เรื่องที่ติดต่อ: \$\{inquiryLabel\}\]/);
 });
 
 test("server-renders the privacy page", async () => {
