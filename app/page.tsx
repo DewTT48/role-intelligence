@@ -218,7 +218,7 @@ export default function Home() {
           <div className="section-shell hero-grid">
             <div className="hero-copy">
               <p className="eyebrow"><span /> A BETTER JOB DESCRIPTION</p>
-              <h1>Job Description ที่ดี<br />คือจุดเริ่มต้นของ<br /><em>การบริหารคนที่ดี</em></h1>
+              <h1 className="title-lines"><span>Job Description ที่ดี</span><span>คือจุดเริ่มต้นของ</span><span><em>การบริหารคนที่ดี</em></span></h1>
               <p className="hero-lead">
                 เริ่มจากข้อมูลตำแหน่งเพียงไม่กี่เรื่อง แล้วเปลี่ยนให้เป็น Job Description 19 หมวด
                 ที่อธิบายทั้งเป้าหมายของงาน ความรับผิดชอบ ผลลัพธ์ และ Competency ได้อย่างครบถ้วน
@@ -273,7 +273,7 @@ export default function Home() {
             <div className="section-heading split-heading jd-preview-heading">
               <div>
                 <p className="eyebrow"><span /> A LITTLE INPUT · A COMPLETE JD</p>
-                <h2>กรอกข้อมูลไม่กี่เรื่อง<br />ได้ JD ที่ครบจนใช้งานต่อได้</h2>
+                <h2 className="title-lines"><span>กรอกข้อมูลไม่กี่เรื่อง</span><span>ได้ JD ที่ครบจนใช้งานต่อได้</span></h2>
               </div>
               <div>
                 <p>ไม่ต้องเริ่มด้วยการเขียนเอกสารยาว ๆ เพียงบอกเหตุผลของตำแหน่ง งานสำคัญ และผลลัพธ์ที่คาดหวัง ระบบจะช่วยเชื่อมข้อมูลเหล่านั้นกับบริบทธุรกิจและ Competency ขององค์กร</p>
@@ -340,7 +340,7 @@ export default function Home() {
             <div className="section-heading split-heading">
               <div>
                 <p className="eyebrow"><span /> THE REAL CHALLENGE</p>
-                <h2>ปัญหาไม่ใช่แค่<br />“เขียน JD ช้า”</h2>
+                <h2 className="title-lines"><span>ปัญหาไม่ใช่แค่</span><span>“เขียน JD ช้า”</span></h2>
               </div>
               <p>
                 ปัญหาที่หนักกว่าคือ JD จำนวนมากไม่สะท้อนงานที่ทำอยู่จริง และไม่ได้บอกให้ชัดว่าตำแหน่งนี้ต้องสร้างผลลัพธ์อะไรให้กับองค์กร
@@ -359,11 +359,19 @@ export default function Home() {
           <div className="section-shell reframe-grid">
             <div className="reframe-quote">
               <p>SMART JD PRINCIPLE</p>
-              <blockquote>“เราไม่ได้ทำ JD เพียงเพื่อให้มีเอกสาร<br />แต่ทำเพื่อให้ทุกคนเข้าใจตรงกันว่า งานนี้มีไว้เพื่ออะไร”</blockquote>
+              <blockquote>
+                <span>“เราไม่ได้ทำ JD เพียงเพื่อให้มีเอกสาร</span>
+                <span>แต่ทำเพื่อให้ทุกคนเข้าใจตรงกันว่า</span>
+                <span>งานนี้มีไว้เพื่ออะไร”</span>
+              </blockquote>
             </div>
             <div className="reframe-copy">
               <p className="eyebrow light"><span /> FROM BASIC JD TO HR FOUNDATION</p>
-              <h2>เปลี่ยนจากการเขียนเอกสาร<br />เป็นการทำความเข้าใจบทบาทงาน</h2>
+              <h2 className="title-lines">
+                <span>เปลี่ยนจากการเขียนเอกสาร</span>
+                <span>เป็นการทำความเข้าใจ</span>
+                <span>บทบาทงาน</span>
+              </h2>
               <p>
                 Smart JD ชวนให้เริ่มจากเหตุผลที่องค์กรต้องมีตำแหน่งนี้ แล้วค่อยเชื่อมไปสู่เป้าหมาย ผลลัพธ์ หน้าที่ ทักษะ และ Competency ที่จำเป็น
               </p>
@@ -375,7 +383,7 @@ export default function Home() {
           <div className="section-shell">
             <div className="section-heading centered-heading">
               <p className="eyebrow"><span /> ONE JD · MORE HR VALUE</p>
-              <h2>JD หนึ่งฉบับ<br />ช่วยให้งาน HR ต่อจากนั้นชัดขึ้น</h2>
+              <h2 className="title-lines"><span>JD หนึ่งฉบับ</span><span>ช่วยให้งาน HR</span><span>ต่อจากนั้นชัดขึ้น</span></h2>
               <p>เมื่อทุกคนเห็นเป้าหมายของงาน หน้าที่ ผลลัพธ์ และ Competency ชุดเดียวกัน การสรรหา สัมภาษณ์ บริหารผลงาน และพัฒนาคนก็เชื่อมต่อกันได้ง่ายขึ้น</p>
             </div>
             <div className="outcome-grid">
@@ -398,7 +406,7 @@ export default function Home() {
             <div className="section-heading split-heading product-heading">
               <div>
                 <p className="eyebrow"><span /> REAL PRODUCT · REAL WORKFLOW</p>
-                <h2>ดูวิธีทำงานจริง<br />ตั้งแต่ต้นจนได้เอกสาร</h2>
+                <h2 className="title-lines"><span>ดูวิธีทำงานจริง</span><span>ตั้งแต่ต้นจนได้เอกสาร</span></h2>
               </div>
               <p>ดูว่าข้อมูลบริษัทและข้อมูลตำแหน่งถูกนำมาใช้ร่วมกันอย่างไร รวมถึงวิธีจัดทำ JD ทีละตำแหน่งหรือนำเข้าหลายตำแหน่งในครั้งเดียว</p>
             </div>
@@ -447,7 +455,7 @@ export default function Home() {
           <div className="section-shell how-grid">
             <div className="how-intro">
               <p className="eyebrow"><span /> A GUIDED PROCESS</p>
-              <h2>จากเหตุผลที่ต้องมีตำแหน่ง<br />สู่ JD ที่พร้อมใช้</h2>
+              <h2 className="title-lines"><span>จากเหตุผลที่ต้องมีตำแหน่ง</span><span>สู่ JD ที่พร้อมใช้</span></h2>
               <p>กระบวนการที่ช่วยให้ HR และ Hiring Manager ค่อย ๆ ตอบคำถามสำคัญร่วมกัน โดยไม่ต้องเริ่มจากหน้ากระดาษเปล่า</p>
               <button className="text-link" type="button" onClick={openContact}>ขอดู Workflow แบบเต็ม <Arrow /></button>
             </div>
@@ -466,7 +474,7 @@ export default function Home() {
           <div className="section-shell">
             <div className="section-heading centered-heading">
               <p className="eyebrow"><span /> WHY SMART JD</p>
-              <h2>เร็วขึ้นอย่างเดียวไม่พอ<br />JD ต้องช่วยให้งาน HR ดีขึ้นด้วย</h2>
+              <h2 className="title-lines"><span>เร็วขึ้นอย่างเดียวไม่พอ</span><span>JD ต้องช่วยให้งาน HR</span><span>ดีขึ้นด้วย</span></h2>
             </div>
             <div className="compare-table">
               <div className="compare-row compare-head"><span>วิธีการ</span><span>จุดเริ่มต้น</span><span>สิ่งที่ได้</span><span>คุณค่าในงาน HR</span></div>
@@ -481,7 +489,7 @@ export default function Home() {
           <div className="section-shell trust-grid">
             <div>
               <p className="eyebrow light"><span /> RESPONSIBLE AI</p>
-              <h2>AI ช่วยร่าง<br /><em>มนุษย์ตัดสินใจ</em></h2>
+              <h2 className="title-lines"><span>AI ช่วยร่าง</span><span><em>มนุษย์ตัดสินใจ</em></span></h2>
             </div>
             <div className="trust-points">
               <p><span>01</span>AI ช่วยร่างและจัดข้อมูลให้เป็นหมวดหมู่จากสิ่งที่ผู้ใช้ระบุ</p>
@@ -506,7 +514,7 @@ export default function Home() {
             </div>
             <div className="founder-copy">
               <p className="eyebrow"><span /> BUILT FROM REAL HR PRACTICE</p>
-              <h2>สร้างจากประสบการณ์ทำงาน HR จริง<br />ไม่ใช่แค่ชุดคำสั่งสำเร็จรูป</h2>
+              <h2 className="title-lines"><span>สร้างจากประสบการณ์</span><span>ทำงาน HR จริง</span><span>ไม่ใช่ชุดคำสั่งสำเร็จรูป</span></h2>
               <p>Smart JD เริ่มจากคำถามที่ HR และ Hiring Manager ต้องคุยกันให้ชัด ก่อนจะสรุปบทบาทหนึ่งออกมาเป็นเอกสารที่ทุกฝ่ายนำไปใช้ร่วมกันได้</p>
               <blockquote>“เครื่องมือที่ดีไม่ควรเพียงเขียนแทนเรา แต่ควรช่วยให้เราคิดเรื่องงานได้ชัดขึ้น”</blockquote>
             </div>
@@ -517,7 +525,7 @@ export default function Home() {
           <div className="section-shell vision-grid">
             <div>
               <p className="eyebrow"><span /> PRODUCT DIRECTION</p>
-              <h2>เริ่มจาก JD ที่ชัด<br />แล้วค่อยเชื่อมงานบริหารคนเข้าด้วยกัน</h2>
+              <h2 className="title-lines"><span>เริ่มจาก JD ที่ชัด</span><span>แล้วเชื่อมงานบริหารคน</span><span>เข้าด้วยกัน</span></h2>
             </div>
             <div className="vision-road">
               <div className="vision-current"><small>พร้อมใช้งานในปัจจุบัน</small><strong>Smart JD</strong><span>Structured Job Description</span></div>
@@ -531,7 +539,7 @@ export default function Home() {
           <div className="section-shell final-box">
             <div>
               <p className="eyebrow light"><span /> START WITH A BETTER FOUNDATION</p>
-              <h2>ลองทำให้ JD ฉบับต่อไป<br />เป็นมากกว่าเอกสารรับสมัคร</h2>
+              <h2 className="title-lines"><span>ลองทำให้ JD ฉบับต่อไป</span><span>เป็นมากกว่าเอกสารรับสมัคร</span></h2>
               <p>ดูตั้งแต่การเก็บข้อมูลตำแหน่ง เชื่อมบริบทธุรกิจ สร้างร่าง ตรวจแก้ จนได้เอกสารที่พร้อมนำไปใช้ต่อ</p>
             </div>
             <div className="final-actions">
