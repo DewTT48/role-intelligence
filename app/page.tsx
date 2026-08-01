@@ -173,9 +173,9 @@ export default function Home() {
 
       <header className="site-header">
         <div className="nav-shell">
-          <a className="brand" href="#top" aria-label="Smart JD หน้าแรก">
+          <a className="brand" href="#top" aria-label="ระบบสร้าง JD อัจฉริยะ หน้าแรก">
             <span className="brand-mark">JD</span>
-            <span>Smart JD</span>
+            <span>ระบบสร้าง JD อัจฉริยะ</span>
           </a>
           <nav className="desktop-nav" aria-label="เมนูหลัก">
             <a href="#jd-preview">ตัวอย่าง JD</a>
@@ -206,7 +206,7 @@ export default function Home() {
             <a href="#how" onClick={() => setMenuOpen(false)}>วิธีการทำงาน</a>
             <a href="#trust" onClick={() => setMenuOpen(false)}>Responsible AI</a>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">เข้าสู่ระบบ</a>
-            <button type="button" onClick={openContact}>ขอเดโม Smart JD</button>
+            <button type="button" onClick={openContact}>ขอเดโม ระบบสร้าง JD อัจฉริยะ</button>
           </nav>
         )}
       </header>
@@ -219,13 +219,15 @@ export default function Home() {
             <div className="hero-copy">
               <p className="eyebrow"><span /> A BETTER JOB DESCRIPTION</p>
               <h1 className="title-lines"><span>Job Description ที่ดี</span><span>คือจุดเริ่มต้นของ</span><span><em>การบริหารคนที่ดี</em></span></h1>
-              <p className="hero-lead">
-                เริ่มจากข้อมูลตำแหน่งเพียงไม่กี่เรื่อง แล้วเปลี่ยนให้เป็น Job Description 19 หมวด
-                ที่อธิบายทั้งเป้าหมายของงาน ความรับผิดชอบ ผลลัพธ์ และ Competency ได้อย่างครบถ้วน
+              <p className="hero-lead copy-lines">
+                <span>เริ่มจากข้อมูลตำแหน่งเพียงไม่กี่เรื่อง</span>
+                <span>แล้วเปลี่ยนให้เป็น Job Description 19 หมวด</span>
+                <span>ที่อธิบายทั้งเป้าหมายของงาน ความรับผิดชอบ</span>
+                <span>ผลลัพธ์ และ Competency ได้อย่างครบถ้วน</span>
               </p>
               <div className="hero-actions">
                 <button className="button button-primary button-large" type="button" onClick={openContact}>
-                  ขอเดโม Smart JD <Arrow />
+                  ขอเดโม ระบบสร้าง JD อัจฉริยะ <Arrow />
                 </button>
                 <a className="button button-secondary button-large" href={APP_URL} target="_blank" rel="noopener noreferrer">
                   มีบัญชีแล้ว เข้าสู่ระบบ
@@ -234,7 +236,7 @@ export default function Home() {
               <p className="human-note"><span>✓</span> AI ช่วยร่างและจัดโครงสร้าง ส่วนคนเป็นผู้ตรวจ แก้ไข และยืนยันก่อนนำไปใช้</p>
             </div>
 
-            <div className="hero-document" aria-label="ตัวอย่าง Job Description ที่สร้างจากระบบ Smart JD">
+            <div className="hero-document" aria-label="ตัวอย่าง Job Description ที่สร้างจากระบบสร้าง JD อัจฉริยะ">
               <div className="hero-document-bar">
                 <span>JOB DESCRIPTION PREVIEW</span>
                 <small>ตัวอย่างจากระบบจริง</small>
@@ -259,7 +261,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="proof-strip" aria-label="จุดเด่นของ Smart JD">
+        <section className="proof-strip" aria-label="จุดเด่นของระบบสร้าง JD อัจฉริยะ">
           <div className="section-shell proof-grid">
             <div><strong>19 structured sections</strong><span>ครบทั้งบทบาท งาน และผลลัพธ์</span></div>
             <div><strong>Business-aligned</strong><span>อธิบายว่างานนี้สำคัญต่อธุรกิจอย่างไร</span></div>
@@ -276,7 +278,11 @@ export default function Home() {
                 <h2 className="title-lines"><span>กรอกข้อมูลไม่กี่เรื่อง</span><span>ได้ JD ที่ครบจนใช้งานต่อได้</span></h2>
               </div>
               <div>
-                <p>ไม่ต้องเริ่มด้วยการเขียนเอกสารยาว ๆ เพียงบอกเหตุผลของตำแหน่ง งานสำคัญ และผลลัพธ์ที่คาดหวัง ระบบจะช่วยเชื่อมข้อมูลเหล่านั้นกับบริบทธุรกิจและ Competency ขององค์กร</p>
+                <p className="copy-lines">
+                  <span>ไม่ต้องเริ่มด้วยการเขียนเอกสารยาว ๆ</span>
+                  <span>เพียงบอกเหตุผลของตำแหน่ง งานสำคัญ และผลลัพธ์ที่คาดหวัง</span>
+                  <span>ระบบจะช่วยเชื่อมข้อมูลเหล่านั้นกับบริบทธุรกิจและ Competency ขององค์กร</span>
+                </p>
                 <span className="sample-note"><i>✓</i> ตัวอย่างจากระบบจริง: Account Executive · 19 หมวด · 8 หน้า</span>
               </div>
             </div>
@@ -296,7 +302,11 @@ export default function Home() {
                   <div className="position-input-field"><small>ตัวชี้วัดความสำเร็จ</small><p>จำนวน Lead มูลค่า Pipeline อัตราปิดการขาย และเวลาตอบลูกค้า</p></div>
                   <div className="position-input-field"><small>ขอบเขตความรับผิดชอบ</small><p>ดูแล Prospect ลูกค้าปัจจุบันบางส่วน และข้อมูล Sales Pipeline</p></div>
                 </div>
-                <p className="position-input-note">จากข้อมูลเท่านี้ ระบบจะช่วยจัดโครงสร้างและเติมรายละเอียดที่จำเป็น โดยผู้ใช้ยังเป็นผู้ตรวจ แก้ไข และยืนยันทุกส่วน</p>
+                <p className="position-input-note copy-lines">
+                  <span>จากข้อมูลเท่านี้ ระบบจะช่วยจัดโครงสร้าง</span>
+                  <span>และเติมรายละเอียดที่จำเป็น โดยผู้ใช้ยังเป็นผู้ตรวจ</span>
+                  <span>แก้ไข และยืนยันทุกส่วน</span>
+                </p>
               </figure>
 
               <div className="input-output-flow" aria-hidden="true">
@@ -340,10 +350,11 @@ export default function Home() {
             <div className="section-heading split-heading">
               <div>
                 <p className="eyebrow"><span /> THE REAL CHALLENGE</p>
-                <h2 className="title-lines"><span>ปัญหาไม่ใช่แค่</span><span>“เขียน JD ช้า”</span></h2>
+                <h2 className="title-lines challenge-title"><span>ปัญหาไม่ใช่แค่ “เขียน JD ช้า”</span></h2>
               </div>
-              <p>
-                ปัญหาที่หนักกว่าคือ JD จำนวนมากไม่สะท้อนงานที่ทำอยู่จริง และไม่ได้บอกให้ชัดว่าตำแหน่งนี้ต้องสร้างผลลัพธ์อะไรให้กับองค์กร
+              <p className="copy-lines">
+                <span>ปัญหาที่หนักกว่าคือ JD จำนวนมากไม่สะท้อนงานที่ทำอยู่จริง</span>
+                <span>และไม่ได้บอกให้ชัดว่าตำแหน่งนี้ต้องสร้างผลลัพธ์อะไรให้กับองค์กร</span>
               </p>
             </div>
             <div className="challenge-grid">
@@ -358,9 +369,10 @@ export default function Home() {
         <section className="section reframe-section">
           <div className="section-shell reframe-grid">
             <div className="reframe-quote">
-              <p>SMART JD PRINCIPLE</p>
+              <p>หลักการของระบบสร้าง JD อัจฉริยะ</p>
               <blockquote>
-                <span>“เราไม่ได้ทำ JD เพียงเพื่อให้มีเอกสาร</span>
+                <span>“เราไม่ได้ทำ JD</span>
+                <span>เพียงเพื่อให้มีเอกสาร</span>
                 <span>แต่ทำเพื่อให้ทุกคนเข้าใจตรงกันว่า</span>
                 <span>งานนี้มีไว้เพื่ออะไร”</span>
               </blockquote>
@@ -373,7 +385,7 @@ export default function Home() {
                 <span>บทบาทงาน</span>
               </h2>
               <p>
-                Smart JD ชวนให้เริ่มจากเหตุผลที่องค์กรต้องมีตำแหน่งนี้ แล้วค่อยเชื่อมไปสู่เป้าหมาย ผลลัพธ์ หน้าที่ ทักษะ และ Competency ที่จำเป็น
+                ระบบสร้าง JD อัจฉริยะ ชวนให้เริ่มจากเหตุผลที่องค์กรต้องมีตำแหน่งนี้ แล้วค่อยเชื่อมไปสู่เป้าหมาย ผลลัพธ์ หน้าที่ ทักษะ และ Competency ที่จำเป็น
               </p>
             </div>
           </div>
@@ -383,7 +395,7 @@ export default function Home() {
           <div className="section-shell">
             <div className="section-heading centered-heading">
               <p className="eyebrow"><span /> ONE JD · MORE HR VALUE</p>
-              <h2 className="title-lines"><span>JD หนึ่งฉบับ</span><span>ช่วยให้งาน HR</span><span>ต่อจากนั้นชัดขึ้น</span></h2>
+              <h2 className="title-lines"><span>JD หนึ่งฉบับ</span><span>ช่วยให้งาน HR ชัดขึ้นทั้งระบบ</span></h2>
               <p>เมื่อทุกคนเห็นเป้าหมายของงาน หน้าที่ ผลลัพธ์ และ Competency ชุดเดียวกัน การสรรหา สัมภาษณ์ บริหารผลงาน และพัฒนาคนก็เชื่อมต่อกันได้ง่ายขึ้น</p>
             </div>
             <div className="outcome-grid">
@@ -408,9 +420,12 @@ export default function Home() {
                 <p className="eyebrow"><span /> REAL PRODUCT · REAL WORKFLOW</p>
                 <h2 className="title-lines"><span>ดูวิธีทำงานจริง</span><span>ตั้งแต่ต้นจนได้เอกสาร</span></h2>
               </div>
-              <p>ดูว่าข้อมูลบริษัทและข้อมูลตำแหน่งถูกนำมาใช้ร่วมกันอย่างไร รวมถึงวิธีจัดทำ JD ทีละตำแหน่งหรือนำเข้าหลายตำแหน่งในครั้งเดียว</p>
+              <p className="copy-lines">
+                <span>ดูว่าข้อมูลบริษัทและข้อมูลตำแหน่งถูกนำมาใช้ร่วมกันอย่างไร</span>
+                <span>รวมถึงวิธีจัดทำ JD ทีละตำแหน่งหรือนำเข้าหลายตำแหน่งในครั้งเดียว</span>
+              </p>
             </div>
-            <div className="product-tabs" role="tablist" aria-label="ตัวอย่างหน้าจอ Smart JD">
+            <div className="product-tabs" role="tablist" aria-label="ตัวอย่างหน้าจอระบบสร้าง JD อัจฉริยะ">
               {productTabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -436,7 +451,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="product-image-wrap">
-                <div className="browser-bar"><span /><span /><span /><small>Smart JD workspace</small></div>
+                <div className="browser-bar"><span /><span /><span /><small>ระบบสร้าง JD อัจฉริยะ</small></div>
                 <Image
                   key={activeProduct.image}
                   src={publicAsset(activeProduct.image)}
@@ -455,7 +470,7 @@ export default function Home() {
           <div className="section-shell how-grid">
             <div className="how-intro">
               <p className="eyebrow"><span /> A GUIDED PROCESS</p>
-              <h2 className="title-lines"><span>จากเหตุผลที่ต้องมีตำแหน่ง</span><span>สู่ JD ที่พร้อมใช้</span></h2>
+              <h2 className="title-lines"><span>จากเหตุผล</span><span>ที่ต้องมีตำแหน่ง</span><span>สู่ JD ที่พร้อมใช้</span></h2>
               <p>กระบวนการที่ช่วยให้ HR และ Hiring Manager ค่อย ๆ ตอบคำถามสำคัญร่วมกัน โดยไม่ต้องเริ่มจากหน้ากระดาษเปล่า</p>
               <button className="text-link" type="button" onClick={openContact}>ขอดู Workflow แบบเต็ม <Arrow /></button>
             </div>
@@ -473,14 +488,14 @@ export default function Home() {
         <section className="section difference-section">
           <div className="section-shell">
             <div className="section-heading centered-heading">
-              <p className="eyebrow"><span /> WHY SMART JD</p>
-              <h2 className="title-lines"><span>เร็วขึ้นอย่างเดียวไม่พอ</span><span>JD ต้องช่วยให้งาน HR</span><span>ดีขึ้นด้วย</span></h2>
+              <p className="eyebrow"><span /> WHY IT MATTERS</p>
+              <h2 className="title-lines"><span>ไม่ใช่แค่ทำ JD ให้เร็วขึ้น</span><span>แต่ทำให้นำไปใช้งานต่อได้ดีขึ้นด้วย</span></h2>
             </div>
             <div className="compare-table">
               <div className="compare-row compare-head"><span>วิธีการ</span><span>จุดเริ่มต้น</span><span>สิ่งที่ได้</span><span>คุณค่าในงาน HR</span></div>
               <div className="compare-row"><strong>Word / ไฟล์เก่า</strong><span>เอกสารเปล่าหรือไฟล์เดิม</span><span>ข้อความและรูปแบบเอกสาร</span><span className="muted-value">จำกัดอยู่ในไฟล์</span></div>
               <div className="compare-row"><strong>Generic AI</strong><span>Prompt</span><span>ร่างข้อความที่รวดเร็ว</span><span className="muted-value">ต้องจัดบริบทและมาตรฐานต่อเอง</span></div>
-              <div className="compare-row featured"><strong><i>JD</i> Smart JD</strong><span>Business Need + Role Information</span><span>Job Description ที่มีโครงสร้างและผ่านการตรวจ</span><span className="good-value">เป็นข้อมูลตั้งต้นสำหรับ People Decisions</span></div>
+              <div className="compare-row featured"><strong><i>JD</i> ระบบสร้าง JD อัจฉริยะ</strong><span>Business Need + Role Information</span><span>Job Description ที่มีโครงสร้างและผ่านการตรวจ</span><span className="good-value">เป็นข้อมูลตั้งต้นสำหรับ People Decisions</span></div>
             </div>
           </div>
         </section>
@@ -504,7 +519,7 @@ export default function Home() {
             <div className="founder-card">
               <Image
                 src={publicAsset("/dew-teerapap.jpeg")}
-                alt="ดิว ธีรภาพ ผู้พัฒนา Smart JD"
+                alt="ดิว ธีรภาพ ผู้พัฒนาระบบสร้าง JD อัจฉริยะ"
                 width={888}
                 height={888}
                 sizes="(max-width: 760px) 100vw, 38vw"
@@ -515,7 +530,7 @@ export default function Home() {
             <div className="founder-copy">
               <p className="eyebrow"><span /> BUILT FROM REAL HR PRACTICE</p>
               <h2 className="title-lines"><span>สร้างจากประสบการณ์</span><span>ทำงาน HR จริง</span><span>ไม่ใช่ชุดคำสั่งสำเร็จรูป</span></h2>
-              <p>Smart JD เริ่มจากคำถามที่ HR และ Hiring Manager ต้องคุยกันให้ชัด ก่อนจะสรุปบทบาทหนึ่งออกมาเป็นเอกสารที่ทุกฝ่ายนำไปใช้ร่วมกันได้</p>
+              <p>ระบบสร้าง JD อัจฉริยะ เริ่มจากคำถามที่ HR และ Hiring Manager ต้องคุยกันให้ชัด ก่อนจะสรุปบทบาทหนึ่งออกมาเป็นเอกสารที่ทุกฝ่ายนำไปใช้ร่วมกันได้</p>
               <blockquote>“เครื่องมือที่ดีไม่ควรเพียงเขียนแทนเรา แต่ควรช่วยให้เราคิดเรื่องงานได้ชัดขึ้น”</blockquote>
             </div>
           </div>
@@ -528,7 +543,7 @@ export default function Home() {
               <h2 className="title-lines"><span>เริ่มจาก JD ที่ชัด</span><span>แล้วเชื่อมงานบริหารคน</span><span>เข้าด้วยกัน</span></h2>
             </div>
             <div className="vision-road">
-              <div className="vision-current"><small>พร้อมใช้งานในปัจจุบัน</small><strong>Smart JD</strong><span>Structured Job Description</span></div>
+              <div className="vision-current"><small>พร้อมใช้งานในปัจจุบัน</small><strong>ระบบสร้าง JD อัจฉริยะ</strong><span>Structured Job Description</span></div>
               <div className="vision-arrow">→</div>
               <div className="vision-future"><small>แนวทางการต่อยอด</small><div><span>Interview</span><span>Competency</span><span>KPI</span><span>Career</span></div></div>
             </div>
@@ -539,11 +554,14 @@ export default function Home() {
           <div className="section-shell final-box">
             <div>
               <p className="eyebrow light"><span /> START WITH A BETTER FOUNDATION</p>
-              <h2 className="title-lines"><span>ลองทำให้ JD ฉบับต่อไป</span><span>เป็นมากกว่าเอกสารรับสมัคร</span></h2>
-              <p>ดูตั้งแต่การเก็บข้อมูลตำแหน่ง เชื่อมบริบทธุรกิจ สร้างร่าง ตรวจแก้ จนได้เอกสารที่พร้อมนำไปใช้ต่อ</p>
+              <h2 className="title-lines"><span>ลองทำให้ JD ของคุณ</span><span>เป็นเอกสารที่เอาไปใช้งาน HR ได้จริง</span></h2>
+              <p className="copy-lines">
+                <span>ดูตั้งแต่การเก็บข้อมูลตำแหน่ง เชื่อมบริบทธุรกิจ</span>
+                <span>สร้างร่าง ตรวจแก้ จนได้เอกสารที่พร้อมนำไปใช้ต่อจริง</span>
+              </p>
             </div>
             <div className="final-actions">
-              <button className="button button-light button-large" type="button" onClick={openContact}>ขอเดโม Smart JD <Arrow /></button>
+              <button className="button button-light button-large" type="button" onClick={openContact}>ขอเดโม ระบบสร้าง JD อัจฉริยะ <Arrow /></button>
               <a href={APP_URL} target="_blank" rel="noopener noreferrer">มีบัญชีแล้ว เข้าสู่ระบบ</a>
             </div>
           </div>
@@ -552,10 +570,10 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="section-shell footer-grid">
-          <div className="brand"><span className="brand-mark">JD</span><span>Smart JD</span></div>
+          <div className="brand"><span className="brand-mark">JD</span><span>ระบบสร้าง JD อัจฉริยะ</span></div>
           <p>สร้าง JD ที่มีคุณค่าต่อการตัดสินใจด้านคน</p>
           <div><Link href="/privacy">นโยบายความเป็นส่วนตัว</Link><button type="button" onClick={openContact}>ติดต่อผู้ดูแล</button></div>
-          <small>© {new Date().getFullYear()} Smart JD</small>
+          <small>© {new Date().getFullYear()} ระบบสร้าง JD อัจฉริยะ</small>
         </div>
       </footer>
 
@@ -565,7 +583,7 @@ export default function Home() {
         }}>
           <section className="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title">
             <div className="modal-header">
-              <div><p className="eyebrow"><span /> REQUEST A DEMO</p><h2 id="contact-title">ขอเดโม Smart JD</h2><p>เล่าให้เราฟังสั้น ๆ ว่าองค์กรของคุณต้องการพัฒนา JD ในด้านใด</p></div>
+              <div><p className="eyebrow"><span /> REQUEST A DEMO</p><h2 id="contact-title">ขอเดโม ระบบสร้าง JD อัจฉริยะ</h2><p>เล่าให้เราฟังสั้น ๆ ว่าองค์กรของคุณต้องการพัฒนา JD ในด้านใด</p></div>
               <button type="button" aria-label="ปิดแบบฟอร์ม" onClick={() => setContactOpen(false)}>×</button>
             </div>
             <form
@@ -578,7 +596,7 @@ export default function Home() {
               noValidate
             >
               <input className="honeypot" type="text" name="company_website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-              <label className="full-field">เรื่องที่ต้องการติดต่อ <span>*</span><select name="inquiry_type" required defaultValue="demo"><option value="demo">ขอเดโม Smart JD</option><option value="trial">ขอทดลองใช้ / ขอเปิดบัญชี</option><option value="pricing">สอบถามราคาและเครดิต</option><option value="corporate">สอบถามสำหรับองค์กร</option><option value="support">แจ้งปัญหาการใช้งาน</option><option value="partnership">ความร่วมมือ / อื่น ๆ</option></select></label>
+              <label className="full-field">เรื่องที่ต้องการติดต่อ <span>*</span><select name="inquiry_type" required defaultValue="demo"><option value="demo">ขอเดโม ระบบสร้าง JD อัจฉริยะ</option><option value="trial">ขอทดลองใช้ / ขอเปิดบัญชี</option><option value="pricing">สอบถามราคาและเครดิต</option><option value="corporate">สอบถามสำหรับองค์กร</option><option value="support">แจ้งปัญหาการใช้งาน</option><option value="partnership">ความร่วมมือ / อื่น ๆ</option></select></label>
               <label>ชื่อผู้ติดต่อ <span>*</span><input name="name" type="text" autoComplete="name" required /></label>
               <label>บริษัท / องค์กร <span>*</span><input name="company" type="text" autoComplete="organization" required /></label>
               <label>อีเมลสำหรับติดต่อกลับ <span>*</span><input name="email" type="email" autoComplete="email" required /></label>

@@ -122,6 +122,7 @@ html[lang="th"] blockquote {
 }
 .title-lines { font-weight: 700 !important; }
 .title-lines > span { display: block; }
+.copy-lines > span { display: block; }
 .section-shell { width: min(var(--shell), calc(100% - 40px)); margin-inline: auto; }
 .section { padding: 110px 0; }
 .skip-link { position: fixed; left: 16px; top: -80px; z-index: 1000; background: var(--ink); color: white; padding: 10px 16px; border-radius: 8px; }
@@ -152,11 +153,11 @@ html[lang="th"] blockquote {
 .hero-orb { position: absolute; border-radius: 999px; filter: blur(3px); }
 .hero-orb-one { width: 220px; height: 220px; background: rgba(53,208,186,0.09); left: -80px; bottom: 40px; }
 .hero-orb-two { width: 90px; height: 90px; border: 22px solid rgba(24,90,219,0.07); right: 5%; top: 18%; }
-.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 0.93fr 1.07fr; gap: 72px; align-items: center; }
+.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 56px; align-items: center; }
 .eyebrow { display: flex; align-items: center; gap: 9px; margin-bottom: 20px; color: var(--blue); font-size: 0.73rem; font-weight: 850; letter-spacing: 0.11em; }
 .eyebrow > span { width: 24px; height: 2px; background: currentColor; border-radius: 2px; }
 .eyebrow.light { color: #78e3d5; }
-.hero h1 { max-width: 680px; margin-bottom: 27px; font-size: clamp(2.8rem, 4.65vw, 4.35rem); line-height: 1.16; letter-spacing: 0; }
+.hero h1 { max-width: 680px; margin-bottom: 27px; font-size: clamp(2.7rem, 4vw, 3.55rem); line-height: 1.16; letter-spacing: 0; }
 .hero h1 em { color: var(--blue); font-style: normal; }
 .hero-lead { max-width: 630px; color: var(--muted); font-size: clamp(1.06rem, 1.6vw, 1.22rem); }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 33px; }
@@ -255,6 +256,7 @@ html[lang="th"] blockquote {
 .section-heading > p:last-child, .how-intro > p, .founder-copy > p { color: var(--muted); font-size: 1.05rem; }
 .split-heading { display: grid; grid-template-columns: 1fr 0.78fr; gap: 80px; align-items: end; margin-bottom: 52px; }
 .split-heading > p { max-width: 510px; margin-bottom: 9px; }
+.challenge-title { font-size: clamp(2rem, 3.2vw, 3rem) !important; }
 .centered-heading { max-width: 780px; margin: 0 auto 55px; text-align: center; }
 .centered-heading .eyebrow { justify-content: center; }
 .challenge-section { background: var(--soft); }
@@ -416,6 +418,11 @@ html[lang="th"] blockquote {
 .legal-footer { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 28px; }
 .legal-footer > a { color: #53677f; font-size: .82rem; }
 .legal-footer small { color: #7c8b9e; }
+
+@media (min-width: 1051px) {
+  .title-lines > span,
+  .hero-lead > span { white-space: nowrap; }
+}
 
 @media (max-width: 1050px) {
   .desktop-nav { display: none; }

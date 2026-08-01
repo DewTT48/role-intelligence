@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "นโยบายความเป็นส่วนตัว | Smart JD",
-  description: "นโยบายการเก็บและใช้ข้อมูลจากแบบฟอร์มติดต่อ Smart JD",
+  title: "นโยบายความเป็นส่วนตัว | ระบบสร้าง JD อัจฉริยะ",
+  description: "นโยบายการเก็บและใช้ข้อมูลจากแบบฟอร์มติดต่อระบบสร้าง JD อัจฉริยะ",
 };
 
 export default function PrivacyPage() {
@@ -13,7 +13,7 @@ export default function PrivacyPage() {
         <div className="nav-shell">
           <Link className="brand" href="/">
             <span className="brand-mark">JD</span>
-            <span>Smart JD</span>
+            <span>ระบบสร้าง JD อัจฉริยะ</span>
           </Link>
           <div className="legal-nav">
             <Link className="button button-ghost" href="/">กลับหน้าแรก</Link>
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
           <p>เมื่อคุณส่งแบบฟอร์มติดต่อ เราอาจเก็บชื่อ บริษัท อีเมล เบอร์โทรศัพท์ ตำแหน่งงาน ขนาดองค์กร หัวข้อที่สนใจ และข้อความที่คุณส่งมา</p>
 
           <h2>วัตถุประสงค์ในการใช้ข้อมูล</h2>
-          <p>เราใช้ข้อมูลเพื่อพิจารณาคำขอเดโม คำขอใช้บริการ ตอบคำถาม ให้การสนับสนุน และติดต่อกลับเกี่ยวกับ Smart JD เท่านั้น</p>
+          <p>เราใช้ข้อมูลเพื่อพิจารณาคำขอเดโม คำขอใช้บริการ ตอบคำถาม ให้การสนับสนุน และติดต่อกลับเกี่ยวกับระบบสร้าง JD อัจฉริยะเท่านั้น</p>
 
           <h2>การเก็บรักษาและการเปิดเผยข้อมูล</h2>
           <p>ข้อมูลจะถูกจัดเก็บใน Google Sheet ที่ผู้ดูแลระบบเป็นเจ้าของ จำกัดการเข้าถึงเฉพาะผู้ดูแลที่เกี่ยวข้อง และจะไม่ขายหรือเปิดเผยเพื่อการโฆษณาของบุคคลภายนอก</p>
@@ -44,9 +44,9 @@ export default function PrivacyPage() {
       </main>
       <footer className="site-footer">
         <div className="section-shell legal-footer">
-          <div className="brand"><span className="brand-mark">JD</span><span>Smart JD</span></div>
+          <div className="brand"><span className="brand-mark">JD</span><span>ระบบสร้าง JD อัจฉริยะ</span></div>
           <Link href="/">กลับหน้าแรก</Link>
-          <small>© {new Date().getFullYear()} Smart JD</small>
+          <small>© {new Date().getFullYear()} ระบบสร้าง JD อัจฉริยะ</small>
         </div>
       </footer>
     </>

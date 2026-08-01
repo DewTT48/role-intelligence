@@ -22,13 +22,13 @@ async function render(pathname = "/") {
   );
 }
 
-test("server-renders the Smart JD landing page", async () => {
+test("server-renders the intelligent JD builder landing page", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /Smart JD — Job Description ที่ดี คือจุดเริ่มต้นของการบริหารคนที่ดี/);
+  assert.match(html, /ระบบสร้าง JD อัจฉริยะ — Job Description ที่ดี คือจุดเริ่มต้นของการบริหารคนที่ดี/);
   assert.match(html, /Job Description ที่ดี/);
   assert.match(html, /Job Description 19 หมวด/);
   assert.match(html, /A LITTLE INPUT · A COMPLETE JD/);
@@ -36,7 +36,7 @@ test("server-renders the Smart JD landing page", async () => {
   assert.match(html, /demo-jd%2Fpage-01\.webp/);
   assert.match(html, /demo-jd%2Fpage-08\.webp/);
   assert.match(html, /เลื่อนลงเพื่ออ่าน JD ฉบับเต็ม/);
-  assert.match(html, /ขอเดโม Smart JD/);
+  assert.match(html, /ขอเดโม ระบบสร้าง JD อัจฉริยะ/);
   assert.match(html, /มีบัญชีแล้ว เข้าสู่ระบบ/);
   assert.match(html, /REAL PRODUCT · REAL WORKFLOW/);
   assert.match(html, /RESPONSIBLE AI/);
