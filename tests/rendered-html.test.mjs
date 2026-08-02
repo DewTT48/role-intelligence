@@ -42,6 +42,7 @@ test("server-renders the intelligent JD builder landing page", async () => {
   assert.match(html, /REAL PRODUCT · REAL WORKFLOW/);
   assert.match(html, /RESPONSIBLE AI/);
   assert.match(html, /\/og\.png/);
+  assert.match(html, /\/icon\.svg/);
   assert.doesNotMatch(html, /สร้าง JD ฟรี|เริ่มสร้าง JD ฟรี|codex-preview/);
   assert.doesNotMatch(html, /JOB DATA|Structured role data|Role Data/);
 });
