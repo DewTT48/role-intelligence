@@ -9,7 +9,7 @@ async function render(pathname = "/") {
 
   return worker.fetch(
     new Request(`http://localhost${pathname}`, {
-      headers: { accept: "text/html", host: "smart-jd.example" },
+      headers: { accept: "text/html", host: "role-intelligence.example" },
     }),
     {
       ASSETS: {
@@ -23,21 +23,21 @@ async function render(pathname = "/") {
   );
 }
 
-test("server-renders the intelligent JD builder landing page", async () => {
+test("server-renders the Role Intelligence landing page", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /ระบบสร้าง JD อัจฉริยะ — Job Description ที่ดี คือจุดเริ่มต้นของการบริหารคนที่ดี/);
+  assert.match(html, /Role Intelligence — เปลี่ยน Job Description ให้ขับเคลื่อนผลลัพธ์/);
   assert.match(html, /Job Description ที่ดี/);
   assert.match(html, /Job Description 19 หมวด/);
   assert.match(html, /A LITTLE INPUT · A COMPLETE JD/);
   assert.match(html, /Account Executive/);
-  assert.match(html, /demo-jd%2Fpage-01\.webp/);
-  assert.match(html, /demo-jd%2Fpage-08\.webp/);
+  assert.match(html, /demo-jd\/page-01\.webp/);
+  assert.match(html, /demo-jd\/page-08\.webp/);
   assert.match(html, /เลื่อนลงเพื่ออ่าน JD ฉบับเต็ม/);
-  assert.match(html, /ขอเดโม ระบบสร้าง JD อัจฉริยะ/);
+  assert.match(html, /ขอเดโม Role Intelligence/);
   assert.match(html, /มีบัญชีแล้ว เข้าสู่ระบบ/);
   assert.match(html, /REAL PRODUCT · REAL WORKFLOW/);
   assert.match(html, /RESPONSIBLE AI/);
@@ -53,7 +53,7 @@ test("keeps the demo form compatible with the deployed lead service", async () =
   assert.match(source, /name="inquiry_type"/);
   assert.match(source, /name="message_body"/);
   assert.match(source, /name="message"/);
-  assert.match(source, /smart-jd-demo-landing/);
+  assert.match(source, /role-intelligence-demo-landing/);
   assert.match(source, /\[เรื่องที่ติดต่อ: \$\{inquiryLabel\}\]/);
 });
 

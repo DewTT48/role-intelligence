@@ -1,4 +1,4 @@
-name: Deploy Smart JD to GitHub Pages
+name: Deploy Role Intelligence to GitHub Pages
 
 on:
   push:

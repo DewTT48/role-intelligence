@@ -4,11 +4,13 @@ const isGitHubPages = process.env.GITHUB_PAGES === "true";
 
 const nextConfig: NextConfig = {
   output: isGitHubPages ? "export" : undefined,
-  basePath: isGitHubPages ? "/smart-jd" : undefined,
-  assetPrefix: isGitHubPages ? "/smart-jd" : undefined,
+  basePath: isGitHubPages ? "/role-intelligence" : undefined,
+  assetPrefix: isGitHubPages ? "/role-intelligence" : undefined,
   trailingSlash: isGitHubPages,
   images: {
-    unoptimized: isGitHubPages,
+    // All product imagery is local and already web-optimized. Serving it
+    // directly keeps previews, GitHub Pages, and Sites on the same path.
+    unoptimized: true,
   },
 };
 

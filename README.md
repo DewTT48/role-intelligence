@@ -1,14 +1,15 @@
-# ระบบสร้าง JD อัจฉริยะ
+# Role Intelligence
 
-Landing page สำหรับระบบสร้าง JD อัจฉริยะ — ระบบที่ช่วยเปลี่ยนข้อมูลตำแหน่งให้เป็น Job Description 19 หมวดที่มีโครงสร้าง เป็นมาตรฐาน และนำไปใช้ต่อในงาน HR ได้ดียิ่งขึ้น
+Landing page สำหรับ Role Intelligence — ระบบที่ช่วยเปลี่ยน Job Description ให้เป็นข้อมูลบทบาทที่เชื่อมเป้าหมาย งาน ผลลัพธ์ KPI และ Competency เพื่อนำไปใช้ต่อในงาน HR ได้จริง
 
-เว็บไซต์: [https://dewtt48.github.io/smart-jd/](https://dewtt48.github.io/smart-jd/)
+เว็บไซต์สำหรับตรวจภายใน: [https://role-intelligence.pjdjpd-3375.chatgpt.site/](https://role-intelligence.pjdjpd-3375.chatgpt.site/)
 
-โปรเจกต์นี้เป็นเว็บไซต์ใหม่ที่แยกจาก `DewTT48/smart-jd-builder` โดยสมบูรณ์ จึงสามารถพัฒนาและเผยแพร่ได้โดยไม่กระทบ Landing Page เดิม
+โปรเจกต์นี้ clone จาก `DewTT48/smart-jd` แล้วแยกเป็นเว็บไซต์ใหม่โดยสมบูรณ์ จึงพัฒนาและเผยแพร่ได้โดยไม่กระทบ Landing Page เดิม
 
 ## สิ่งที่มีในเว็บไซต์
 
-- Landing page ภาษาไทยแบบ Responsive
+- Landing page ภาษาไทยแบบ Responsive ภายใต้แบรนด์ Role Intelligence
+- ธีม Midnight Navy, Electric Blue, Performance Red และ Yellow accent
 - CTA `ขอเดโม` และ `เข้าสู่ระบบ` โดยไม่มีการเสนอสร้าง JD ฟรี
 - ภาพหน้าจอระบบจริง: JD Workspace, Business Context และ Batch Import
 - ตัวอย่าง Job Description ฉบับจริง 8 หน้า พร้อมตัวสำรวจเนื้อหา 19 หมวด
@@ -46,4 +47,4 @@ GitHub Pages จะ build และ publish อัตโนมัติจาก
 
 ## การเชื่อมระบบ
 
-ลิงก์เข้าสู่ระบบและ Lead API ใช้ปลายทางเดียวกับ Landing Page ปัจจุบัน เพื่อรักษา Workflow ของผู้ใช้เดิมและการรับคำขอเดโม
+ลิงก์เข้าสู่ระบบชี้ไปยัง Retail UAT V3.3.2 ส่วน Lead API ยังคงใช้บริการรับคำขอเดโมเดิม

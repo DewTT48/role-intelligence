@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FormEvent, useEffect, useRef, useState } from "react";
 
 const APP_URL =
-  "https://script.google.com/macros/s/AKfycbwLVLP47ZKYsMz6cpAYSGVPWdmQ6g9AmX0cDF1A0SV6tx9NR8Z1A_snPuAnw2tMHFRf/exec";
+  "https://script.google.com/macros/s/AKfycbyh8i1-rd85lupTa8Li7SF9ce1vBCJL04hi9mURyDjo3SenL0MK6FG-z3DthdQ5BkUC/exec";
 const LEAD_ENDPOINT =
   "https://script.google.com/macros/s/AKfycbwukSqFDCuGT15ZvM9j0b4hUy1qE1rr2v__kt8NQgj09dubVIpJkrFU1Wd_RfUoSqMx/exec";
 // The deployed lead service uses "trial" for demo and account-opening requests.
@@ -256,9 +256,9 @@ export default function Home() {
 
       <header className="site-header">
         <div className="nav-shell">
-          <a className="brand" href="#top" aria-label="ระบบสร้าง JD อัจฉริยะ หน้าแรก">
-            <span className="brand-mark">JD</span>
-            <span>ระบบสร้าง JD อัจฉริยะ</span>
+          <a className="brand" href="#top" aria-label="Role Intelligence หน้าแรก">
+            <span className="brand-mark">RI</span>
+            <span>Role Intelligence</span>
           </a>
           <nav className="desktop-nav" aria-label="เมนูหลัก">
             <a href="#jd-preview">ตัวอย่าง JD</a>
@@ -289,7 +289,7 @@ export default function Home() {
             <a href="#how" onClick={() => setMenuOpen(false)}>วิธีการทำงาน</a>
             <a href="#trust" onClick={() => setMenuOpen(false)}>Responsible AI</a>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">เข้าสู่ระบบ</a>
-            <button type="button" onClick={openContact}>ขอเดโม ระบบสร้าง JD อัจฉริยะ</button>
+            <button type="button" onClick={openContact}>ขอเดโม Role Intelligence</button>
           </nav>
         )}
       </header>
@@ -300,7 +300,7 @@ export default function Home() {
           <div className="hero-orb hero-orb-two" />
           <div className="section-shell hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow"><span /> A BETTER JOB DESCRIPTION</p>
+              <p className="eyebrow"><span /> ROLE INTELLIGENCE</p>
               <h1 className="title-lines"><span>Job Description ที่ดี</span><span>คือจุดเริ่มต้นของ</span><span><em>การบริหารคนที่ดี</em></span></h1>
               <p className="hero-lead copy-lines">
                 <span>เริ่มจากข้อมูลตำแหน่งเพียงไม่กี่เรื่อง</span>
@@ -310,7 +310,7 @@ export default function Home() {
               </p>
               <div className="hero-actions">
                 <button className="button button-primary button-large" type="button" onClick={openContact}>
-                  ขอเดโม ระบบสร้าง JD อัจฉริยะ <Arrow />
+                  ขอเดโม Role Intelligence <Arrow />
                 </button>
                 <a className="button button-secondary button-large" href={APP_URL} target="_blank" rel="noopener noreferrer">
                   มีบัญชีแล้ว เข้าสู่ระบบ
@@ -319,7 +319,7 @@ export default function Home() {
               <p className="human-note"><span>✓</span> AI ช่วยร่างและจัดโครงสร้าง ส่วนคนเป็นผู้ตรวจ แก้ไข และยืนยันก่อนนำไปใช้</p>
             </div>
 
-            <div className="hero-document" aria-label="ตัวอย่าง Job Description ที่สร้างจากระบบสร้าง JD อัจฉริยะ">
+            <div className="hero-document" aria-label="ตัวอย่าง Job Description ที่สร้างจาก Role Intelligence">
               <div className="hero-document-bar">
                 <span>JOB DESCRIPTION PREVIEW</span>
                 <small>ตัวอย่างจากระบบจริง</small>
@@ -330,6 +330,7 @@ export default function Home() {
                   alt="ตัวอย่าง Job Description ตำแหน่ง Account Executive หน้าแรก"
                   width={1200}
                   height={1695}
+                  unoptimized
                   priority
                   sizes="(max-width: 1050px) 80vw, 48vw"
                 />
@@ -344,7 +345,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="proof-strip" aria-label="จุดเด่นของระบบสร้าง JD อัจฉริยะ">
+        <section className="proof-strip" aria-label="จุดเด่นของ Role Intelligence">
           <div className="section-shell proof-grid">
             <div><strong>19 structured sections</strong><span>ครบทั้งบทบาท งาน และผลลัพธ์</span></div>
             <div><strong>Business-aligned</strong><span>อธิบายว่างานนี้สำคัญต่อธุรกิจอย่างไร</span></div>
@@ -416,6 +417,7 @@ export default function Home() {
                         alt={`หน้า ${page} จาก 8 ของ Job Description ตำแหน่ง Account Executive`}
                         width={1200}
                         height={1695}
+                        unoptimized
                         loading={page === 1 ? "eager" : "lazy"}
                         sizes="(max-width: 900px) 100vw, 58vw"
                       />
@@ -455,7 +457,7 @@ export default function Home() {
         <section className="section reframe-section">
           <div className="section-shell reframe-grid">
             <div className="reframe-quote">
-              <p>หลักการของระบบสร้าง JD อัจฉริยะ</p>
+              <p>หลักการของ Role Intelligence</p>
               <blockquote>
                 <span>“เราไม่ได้ทำ JD</span>
                 <span>เพียงเพื่อให้มีเอกสาร</span>
@@ -471,7 +473,7 @@ export default function Home() {
                 <span>บทบาทงาน</span>
               </h2>
               <p>
-                ระบบสร้าง JD อัจฉริยะ ชวนให้เริ่มจากเหตุผลที่องค์กรต้องมีตำแหน่งนี้ แล้วค่อยเชื่อมไปสู่เป้าหมาย ผลลัพธ์ หน้าที่ ทักษะ และ Competency ที่จำเป็น
+                Role Intelligence ชวนให้เริ่มจากเหตุผลที่องค์กรต้องมีตำแหน่งนี้ แล้วค่อยเชื่อมไปสู่เป้าหมาย ผลลัพธ์ หน้าที่ ทักษะ และ Competency ที่จำเป็น
               </p>
             </div>
           </div>
@@ -519,7 +521,7 @@ export default function Home() {
                 <span>รวมถึงวิธีจัดทำ JD ทีละตำแหน่งหรือนำเข้าหลายตำแหน่งในครั้งเดียว</span>
               </p>
             </div>
-            <div className="product-tabs" role="tablist" aria-label="ตัวอย่างหน้าจอระบบสร้าง JD อัจฉริยะ">
+            <div className="product-tabs" role="tablist" aria-label="ตัวอย่างหน้าจอ Role Intelligence">
               {productTabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -545,13 +547,14 @@ export default function Home() {
                 </ul>
               </div>
               <div className="product-image-wrap">
-                <div className="browser-bar"><span /><span /><span /><small>ระบบสร้าง JD อัจฉริยะ</small></div>
+                <div className="browser-bar"><span /><span /><span /><small>Role Intelligence</small></div>
                 <Image
                   key={activeProduct.image}
                   src={publicAsset(activeProduct.image)}
                   alt={activeProduct.alt}
                   width={1440}
                   height={1100}
+                  unoptimized
                   sizes="(max-width: 900px) 100vw, 65vw"
                   className="product-image"
                 />
@@ -589,7 +592,7 @@ export default function Home() {
               <div className="compare-row compare-head"><span>วิธีการ</span><span>จุดเริ่มต้น</span><span>สิ่งที่ได้</span><span>คุณค่าในงาน HR</span></div>
               <div className="compare-row"><strong>Word / ไฟล์เก่า</strong><span>เอกสารเปล่าหรือไฟล์เดิม</span><span>ข้อความและรูปแบบเอกสาร</span><span className="muted-value">จำกัดอยู่ในไฟล์</span></div>
               <div className="compare-row"><strong>Generic AI</strong><span>Prompt</span><span>ร่างข้อความที่รวดเร็ว</span><span className="muted-value">ต้องจัดบริบทและมาตรฐานต่อเอง</span></div>
-              <div className="compare-row featured"><strong><i>JD</i> ระบบสร้าง JD อัจฉริยะ</strong><span>Business Need + Role Information</span><span>Job Description ที่มีโครงสร้างและผ่านการตรวจ</span><span className="good-value">เป็นข้อมูลตั้งต้นสำหรับ People Decisions</span></div>
+              <div className="compare-row featured"><strong><i>RI</i> Role Intelligence</strong><span>Business Need + Role Information</span><span>Job Description ที่มีโครงสร้างและผ่านการตรวจ</span><span className="good-value">เป็นข้อมูลตั้งต้นสำหรับ People Decisions</span></div>
             </div>
           </div>
         </section>
@@ -613,9 +616,10 @@ export default function Home() {
             <div className="founder-card">
               <Image
                 src={publicAsset("/dew-teerapap.jpeg")}
-                alt="ดิว ธีรภาพ ผู้พัฒนาระบบสร้าง JD อัจฉริยะ"
+                alt="ดิว ธีรภาพ ผู้พัฒนา Role Intelligence"
                 width={888}
                 height={888}
+                unoptimized
                 sizes="(max-width: 760px) 100vw, 38vw"
                 className="founder-photo"
               />
@@ -624,7 +628,7 @@ export default function Home() {
             <div className="founder-copy">
               <p className="eyebrow"><span /> BUILT FROM REAL HR PRACTICE</p>
               <h2 className="title-lines"><span>สร้างจากประสบการณ์</span><span>ทำงาน HR จริง</span><span>ไม่ใช่ชุดคำสั่งสำเร็จรูป</span></h2>
-              <p>ระบบสร้าง JD อัจฉริยะ เริ่มจากคำถามที่ HR และ Hiring Manager ต้องคุยกันให้ชัด ก่อนจะสรุปบทบาทหนึ่งออกมาเป็นเอกสารที่ทุกฝ่ายนำไปใช้ร่วมกันได้</p>
+              <p>Role Intelligence เริ่มจากคำถามที่ HR และ Hiring Manager ต้องคุยกันให้ชัด ก่อนจะสรุปบทบาทหนึ่งออกมาเป็นเอกสารที่ทุกฝ่ายนำไปใช้ร่วมกันได้</p>
               <blockquote>“เครื่องมือที่ดีไม่ควรเพียงเขียนแทนเรา แต่ควรช่วยให้เราคิดเรื่องงานได้ชัดขึ้น”</blockquote>
             </div>
           </div>
@@ -663,10 +667,10 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="section-shell footer-grid">
-          <div className="brand"><span className="brand-mark">JD</span><span>ระบบสร้าง JD อัจฉริยะ</span></div>
+          <div className="brand"><span className="brand-mark">RI</span><span>Role Intelligence</span></div>
           <p>สร้าง JD ที่มีคุณค่าต่อการตัดสินใจด้านคน</p>
           <div><Link href="/privacy">นโยบายความเป็นส่วนตัว</Link><button type="button" onClick={openContact}>ติดต่อผู้ดูแล</button></div>
-          <small>© {new Date().getFullYear()} ระบบสร้าง JD อัจฉริยะ</small>
+          <small>© {new Date().getFullYear()} Role Intelligence</small>
         </div>
       </footer>
 
@@ -676,7 +680,7 @@ export default function Home() {
         }}>
           <section className="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title">
             <div className="modal-header">
-              <div><p className="eyebrow"><span /> REQUEST A DEMO</p><h2 id="contact-title">ขอเดโม ระบบสร้าง JD อัจฉริยะ</h2><p>เล่าให้เราฟังสั้น ๆ ว่าองค์กรของคุณต้องการพัฒนา JD ในด้านใด</p></div>
+              <div><p className="eyebrow"><span /> REQUEST A DEMO</p><h2 id="contact-title">ขอเดโม Role Intelligence</h2><p>เล่าให้เราฟังสั้น ๆ ว่าองค์กรของคุณต้องการพัฒนา JD ในด้านใด</p></div>
               <button type="button" aria-label="ปิดแบบฟอร์ม" onClick={() => setContactOpen(false)}>×</button>
             </div>
             <form
@@ -689,7 +693,7 @@ export default function Home() {
               noValidate
             >
               <input className="honeypot" type="text" name="company_website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-              <label className="full-field"><span className="field-label">เรื่องที่ต้องการติดต่อ <i>*</i></span><select name="inquiry_type" required defaultValue={DEMO_INQUIRY_VALUE}><option value={DEMO_INQUIRY_VALUE}>ขอเดโม ระบบสร้าง JD อัจฉริยะ</option><option value="pricing">สอบถามราคาและเครดิต</option><option value="corporate">สอบถามสำหรับองค์กร</option><option value="support">แจ้งปัญหาการใช้งาน</option><option value="partnership">ความร่วมมือ / อื่น ๆ</option></select></label>
+              <label className="full-field"><span className="field-label">เรื่องที่ต้องการติดต่อ <i>*</i></span><select name="inquiry_type" required defaultValue={DEMO_INQUIRY_VALUE}><option value={DEMO_INQUIRY_VALUE}>ขอเดโม Role Intelligence</option><option value="pricing">สอบถามราคาและเครดิต</option><option value="corporate">สอบถามสำหรับองค์กร</option><option value="support">แจ้งปัญหาการใช้งาน</option><option value="partnership">ความร่วมมือ / อื่น ๆ</option></select></label>
               <label><span className="field-label">ชื่อผู้ติดต่อ <i>*</i></span><input name="name" type="text" autoComplete="name" required /></label>
               <label><span className="field-label">บริษัท / องค์กร <i>*</i></span><input name="company" type="text" autoComplete="organization" required /></label>
               <label><span className="field-label">อีเมลสำหรับติดต่อกลับ <i>*</i></span><input name="email" type="email" autoComplete="email" required /></label>
@@ -699,7 +703,7 @@ export default function Home() {
               <label className="full-field"><span className="field-label">สิ่งที่ต้องการพัฒนาเกี่ยวกับ JD <i>*</i></span><textarea name="message_body" rows={4} required placeholder="เช่น ต้องการปรับ JD ให้เป็นมาตรฐาน หรือนำข้อมูลไปใช้ในการสรรหาและประเมินผลงาน" /></label>
               <label className="consent full-field"><input type="checkbox" name="consent" value="accepted" required /><span>ฉันยินยอมให้เก็บและใช้ข้อมูลนี้เพื่อติดต่อกลับเกี่ยวกับบริการ <Link href="/privacy" target="_blank">อ่านนโยบายความเป็นส่วนตัว</Link></span></label>
               <input type="hidden" name="message" value="" />
-              <input type="hidden" name="source" value="smart-jd-demo-landing" />
+              <input type="hidden" name="source" value="role-intelligence-demo-landing" />
               <input type="hidden" name="request_id" value="" />
               <input type="hidden" name="page_url" value="" />
               <input type="hidden" name="user_agent" value="" />
