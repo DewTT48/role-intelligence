@@ -47,7 +47,7 @@ GitHub Pages จะ build และ publish อัตโนมัติจาก
 
 ## การเชื่อมระบบ
 
-ลิงก์เข้าสู่ระบบชี้ไปยัง Role Intelligence Production V3.5.0 ส่วน Lead API ยังคงใช้บริการรับคำขอเดโมเดิม
+ลิงก์เข้าสู่ระบบชี้ไปยัง Role Intelligence Production V3.6.0 ส่วน Lead API ยังคงใช้บริการรับคำขอเดโมเดิม
 
 ตั้งแต่ V3.4.2 ระบบจะบันทึกและตรวจสอบ Version 1 โดยอัตโนมัติหลังสร้าง JD สำเร็จ การแก้ไขด้วยผู้ใช้หรือ AI จะอยู่ในสถานะร่าง และสร้าง Version ถัดไปเมื่อผู้ใช้กดบันทึกเท่านั้น ส่วน V3.4.3 เพิ่มการรีเฟรชตำแหน่งหลังนำเข้าทันที การแจ้งข้อมูลที่ขาดทั้งด้านบนและด้านล่าง และลดรอบอ่านเขียน Google Sheets ในงานหลัก และ V3.4.4 เพิ่มหน้าต่างแสดงสถานะอัปโหลดแบบป้องกันการกดซ้ำ พร้อมลดภาระการอ่านไฟล์ XLSX และแสดงรายการ Staging ใหม่โดยไม่โหลดคิวทั้งชีตซ้ำ
 
@@ -64,3 +64,15 @@ V3.4.9 ปรับประสบการณ์ใช้งานหน้า 
 V3.4.10 ปรับหน้าโปรไฟล์ให้สรุปตัวตน เครดิตคงเหลือ สถานะบัญชี วิธีเข้าใช้งาน และเวลาล็อกอินได้ชัดเจนขึ้น แสดง System Admin ที่ใช้ Google Workspace โดยไม่ขึ้นข้อความชวนสับสนว่าไม่มีข้อมูล เพิ่มคำอธิบายค่าเครดิตสำหรับ Full JD, การสร้างใหม่รายหัวข้อ และการบันทึก Version ที่ไม่เรียก AI พร้อมเปลี่ยนประวัติเครดิตเป็นรายการกิจกรรมแบบ Responsive โดยไม่แก้ข้อมูลผู้ใช้หรือกลไกคำนวณเครดิต
 
 V3.5.0 เป็นชุดปรับประสบการณ์ใช้งานหน้าหลักให้เป็น Design System เดียวกัน โดยเปลี่ยนตำแหน่งงานทั้งหมด เอกสาร/ดาวน์โหลด และคำขอเติมเครดิตเป็นการ์ดที่แสดงสถานะ ขั้นตอนถัดไป และปุ่มดำเนินการชัดเจนขึ้น ปรับหน้าประวัติ JD ให้ควบคุมการเลือกและเปรียบเทียบเวอร์ชันได้เป็นสัดส่วน และจัด Prompt Config กับ Admin Settings เป็นกลุ่ม Folder, AI, Document, Notification และค่าทั่วไปเพื่อค้นหาได้ง่ายขึ้น การเปลี่ยนแปลงทั้งหมดเป็น UI/UX เท่านั้น ไม่แก้ workflow สร้าง JD สิทธิ์ผู้ใช้ ยอดเครดิต หรือข้อมูลใน Google Sheets
+
+
+## V3.6.0 workflow UI
+
+- JD Workspace recommends the next eligible action and groups secondary operations.
+- Position input has four sections and progress that includes conditional required fields.
+- Batch import summarizes statuses and shows readable cards with accessible actions on mobile.
+- JD support and departments use cards; department details expand without changing the save payload.
+- Company, Core and Managerial sections switch without discarding unsaved form values.
+- Templates show the create/fill/download/import sequence; the guide supports text search.
+
+Validation: existing regression checks and local browser tests with synthetic data passed for all eight screens at 1440px and 390px, including required-field progress, section switching, department serialization, import counts, guide search and action eligibility. Server service files match V3.5.0; Config.js only changes the version. No live JD generation or email sending was performed during these tests.
