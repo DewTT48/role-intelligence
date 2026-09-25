@@ -1,0 +1,31 @@
+{
+  "name": "Role Intelligence",
+  "short_name": "Role Intelligence",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "lang": "th",
+  "background_color": "#071A52",
+  "theme_color": "#071A52",
+  "icons": [
+    {
+      "src": "icons/home-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/home-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/home-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
